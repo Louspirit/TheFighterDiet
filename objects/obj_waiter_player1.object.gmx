@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//event_inherited();
+            <string>event_inherited();
 left_sprite=spr_waiter_p1_left;
 right_sprite=spr_waiter_p1_right;
 idle_right_sprite=spr_waiter_p1_idle_right;
@@ -89,7 +89,7 @@ idle_left_sprite=spr_waiter_p1_idle_left;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>waiter_speed = 25;
+            <string>self.waiter_speed = 25;
 </string>
           </argument>
         </arguments>

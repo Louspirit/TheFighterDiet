@@ -54,6 +54,7 @@
     <object>objects\obj_spawner</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_test1</room>
     <room>rooms\rm_DiningRoom</room>
     <room>rooms\rm_test</room>
   </rooms>
