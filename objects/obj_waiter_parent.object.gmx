@@ -33,6 +33,30 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_speed</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>1</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -51,7 +75,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(keyboard_check(vk_left))
+            <string>// sprite speed
+image_speed = 0.3;
+
+if(keyboard_check(vk_left))
 {
     hspeed = -waiter_speed;
     sprite_index = left_sprite;
@@ -64,7 +91,16 @@ if(keyboard_check(vk_right))
 if(keyboard_check(vk_nokey))
 {
     hspeed = 0;
-    sprite_index = idle_sprite;
+    // change to the good orientated idle
+    if (sprite_index = right_sprite)
+    {
+        sprite_index = idle_right_sprite;
+    }
+    else
+    {
+        sprite_index = idle_left_sprite;
+    }
+
 }
 </string>
           </argument>
