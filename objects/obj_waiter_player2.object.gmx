@@ -58,6 +58,52 @@ idle_left_sprite=spr_waiter_p1_idle_left;
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(keyboard_check(vk_down))
+{
+    hspeed = -waiter_speed;
+    sprite_index = left_sprite;
+}
+if(keyboard_check(vk_up))
+{
+    hspeed = waiter_speed;
+    sprite_index = right_sprite;
+}
+if(keyboard_check(vk_nokey))
+{
+    hspeed = 0;
+    // change to the good orientated idle
+    if (sprite_index == right_sprite)
+    {
+        sprite_index = idle_right_sprite;
+    }
+    else if (sprite_index == left_sprite)
+    {
+        sprite_index = idle_left_sprite;
+    }
+
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_speedUp">
       <action>
         <libid>1</libid>
