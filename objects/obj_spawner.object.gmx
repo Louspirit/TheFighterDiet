@@ -11,28 +11,30 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
+        <id>301</id>
+        <kind>0</kind>
         <userelative>-1</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>vitesse</string>
+            <kind>0</kind>
+            <string>20</string>
           </argument>
           <argument>
-            <kind>0</kind>
-            <string>3</string>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -49,7 +51,73 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>//posx=random(room_width)
+
+nb_stat = 3;
+choixFood = random(nb_stat);
+
+atk = 0;
+def = 1;
+vit = 2;
+
+if(choixFood &gt;= atk &amp;&amp; choixFood &lt; def){
+    instance_create(random(room_width), 20, obj_gigot);
+}
+else if(choixFood &gt;= def &amp;&amp; choixFood &lt; vit){
+    instance_create(random(room_width), 20, obj_legume);
+}else{
+    instance_create(random(room_width), 20, obj_fruit);
+}
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>20</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="82">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_restart();
+</string>
           </argument>
         </arguments>
       </action>
