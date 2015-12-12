@@ -16,6 +16,8 @@
       <sprite>sprites\spr_fallingItem</sprite>
       <sprites name="Food">
         <sprite>sprites\spr_gigot</sprite>
+        <sprite>sprites\spr_legume</sprite>
+        <sprite>sprites\spr_fruit</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -33,6 +35,8 @@
       <object>objects\obj_fallingItem</object>
       <objects name="Food">
         <object>objects\obj_gigot</object>
+        <object>objects\obj_legume</object>
+        <object>objects\obj_fruit</object>
       </objects>
     </objects>
     <object>objects\obj_spawner</object>
