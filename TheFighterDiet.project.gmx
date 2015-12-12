@@ -10,7 +10,12 @@
       <sprite>sprites\spr_waiter</sprite>
       <sprite>sprites\spr_monster</sprite>
     </sprites>
-    <sprite>sprites\spr_fallingItem</sprite>
+    <sprites name="Items">
+      <sprite>sprites\spr_fallingItem</sprite>
+      <sprites name="Food">
+        <sprite>sprites\spr_gigot</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -19,11 +24,16 @@
       <object>objects\obj_waiter</object>
       <object>objects\obj_monster</object>
     </objects>
-    <objects name="Item">
+    <objects name="Items">
       <object>objects\obj_fallingItem</object>
+      <objects name="Food">
+        <object>objects\obj_gigot</object>
+      </objects>
     </objects>
+    <object>objects\obj_spawner</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_test</room>
     <room>rooms\rm_DiningRoom</room>
   </rooms>
   <help>

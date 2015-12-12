@@ -131,6 +131,7 @@
     <option_androidfire_scale>-1</option_androidfire_scale>
     <option_androidfire_set_device_id></option_androidfire_set_device_id>
     <option_androidfire_small_icon_png>Configs\Default\amazonfire\icons\small_icon</option_androidfire_small_icon_png>
+    <option_androidfire_small_icon_png>Configs\Default\amazonfire\icons\small_icon.png</option_androidfire_small_icon_png>
     <option_androidfire_splash_png>Configs\Default\amazonfire\splash.png</option_androidfire_splash_png>
     <option_androidfire_splash_time>0</option_androidfire_splash_time>
     <option_androidfire_target_sdk_version>23</option_androidfire_target_sdk_version>
