@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>left_sprite=spr_waiter_p1_left;
 right_sprite=spr_waiter_p1_right;
+idle_sprite=spr_waiter_p1_idle;
 waiter_speed=10;
 </string>
           </argument>

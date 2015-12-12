@@ -64,8 +64,7 @@ if(keyboard_check(vk_right))
 if(keyboard_check(vk_nokey))
 {
     hspeed = 0;
-    // TODO
-    // sprite_index = ...
+    sprite_index = idle_sprite;
 }
 </string>
           </argument>
