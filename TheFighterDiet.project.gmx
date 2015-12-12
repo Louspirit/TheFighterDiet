@@ -23,7 +23,9 @@
       </sprites>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bck_dinerRoom</background>
+  </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
     <objects name="Character">
