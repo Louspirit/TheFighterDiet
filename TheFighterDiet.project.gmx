@@ -20,6 +20,9 @@
         <sprite>sprites\spr_legume</sprite>
         <sprite>sprites\spr_fruit</sprite>
       </sprites>
+      <sprites name="Power">
+        <sprite>sprites\spr_speedUp</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -41,6 +44,9 @@
         <object>objects\obj_gigot</object>
         <object>objects\obj_legume</object>
         <object>objects\obj_fruit</object>
+      </objects>
+      <objects name="Power">
+        <object>objects\obj_speedUp</object>
       </objects>
     </objects>
     <object>objects\obj_spawner</object>

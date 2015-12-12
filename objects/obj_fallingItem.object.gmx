@@ -29,7 +29,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>3</string>
+            <string>random(4)+1</string>
           </argument>
         </arguments>
       </action>
