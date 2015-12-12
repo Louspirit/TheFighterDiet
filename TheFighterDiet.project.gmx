@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sound1_the_fighter_diet_main_theme</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Character">
       <sprite>sprites\spr_waiter_p1_right</sprite>
@@ -14,6 +16,7 @@
       <sprite>sprites\spr_waiter_p1_left</sprite>
       <sprite>sprites\spr_waiter_p1_idle_right</sprite>
       <sprite>sprites\spr_waiter_p1_idle_left</sprite>
+      <sprite>sprites\spr_hit_normal</sprite>
     </sprites>
     <sprites name="Items">
       <sprite>sprites\spr_fallingItem</sprite>
@@ -33,11 +36,11 @@
   <paths name="paths"/>
   <objects name="objects">
     <objects name="Character">
-      <object>objects\obj_waiter_player1</object>
       <object>objects\obj_monster_player1</object>
       <object>objects\obj_monster_player2</object>
       <object>objects\obj_monster_parent</object>
       <object>objects\obj_waiter_player2</object>
+      <object>objects\obj_waiter_player1</object>
       <object>objects\obj_waiter_parent</object>
     </objects>
     <objects name="Items">
@@ -50,6 +53,7 @@
       <objects name="Power">
         <object>objects\obj_speedUp</object>
       </objects>
+      <object>objects\obj_hit</object>
     </objects>
     <object>objects\obj_spawner</object>
   </objects>
