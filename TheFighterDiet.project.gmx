@@ -12,6 +12,8 @@
       <sprite>sprites\spr_monster_player2</sprite>
       <sprite>sprites\spr_waiter_player2</sprite>
       <sprite>sprites\spr_waiter_p1_left</sprite>
+      <sprite>sprites\spr_waiter_p1_idle_right</sprite>
+      <sprite>sprites\spr_waiter_p1_idle_left</sprite>
     </sprites>
     <sprites name="Items">
       <sprite>sprites\spr_fallingItem</sprite>
@@ -22,7 +24,9 @@
       </sprites>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bck_dinerRoom</background>
+  </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
     <objects name="Character">
