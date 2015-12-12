@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sound1_the_fighter_diet_main_theme</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Character">
       <sprite>sprites\spr_waiter_p1_right</sprite>
