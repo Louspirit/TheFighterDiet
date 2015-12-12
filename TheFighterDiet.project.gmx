@@ -36,11 +36,11 @@
   <paths name="paths"/>
   <objects name="objects">
     <objects name="Character">
-      <object>objects\obj_waiter_player1</object>
       <object>objects\obj_monster_player1</object>
       <object>objects\obj_monster_player2</object>
       <object>objects\obj_monster_parent</object>
       <object>objects\obj_waiter_player2</object>
+      <object>objects\obj_waiter_player1</object>
       <object>objects\obj_waiter_parent</object>
     </objects>
     <objects name="Items">
