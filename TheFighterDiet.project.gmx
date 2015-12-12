@@ -7,9 +7,10 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="Character">
-      <sprite>sprites\spr_waiter_player1</sprite>
+      <sprite>sprites\spr_waiter_p1_right</sprite>
       <sprite>sprites\spr_monster</sprite>
       <sprite>sprites\spr_waiter_player2</sprite>
+      <sprite>sprites\spr_waiter_p1_left</sprite>
     </sprites>
     <sprite>sprites\spr_fallingItem</sprite>
   </sprites>
@@ -18,6 +19,7 @@
   <objects name="objects">
     <objects name="Character">
       <object>objects\obj_waiter_player1</object>
+      <object>objects\obj_waiter_parent</object>
       <object>objects\obj_monster</object>
       <object>objects\obj_waiter_player2</object>
     </objects>
