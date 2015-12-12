@@ -5,7 +5,7 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\sound1_the_fighter_diet_main_theme</sound>
+    <sound>sound\main_theme</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Character">
@@ -56,6 +56,9 @@
       <object>objects\obj_hit</object>
     </objects>
     <object>objects\obj_spawner</object>
+    <objects name="Sounds">
+      <object>objects\snd_main_theme</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test1</room>
