@@ -25,9 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>waiter_speed_base=10;
+            <string>global.multikeypress=false
+
+waiter_speed_base=10;
+waiter_speed_slow=3;
 waiter_speed=waiter_speed_base;
 image_speed=0.3;
+bag_size=3;
+
 </string>
           </argument>
         </arguments>
