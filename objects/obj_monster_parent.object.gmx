@@ -126,6 +126,8 @@ if(instance_exists(self.table.id_obj_pickable) &amp;&amp; self.table.id_obj_pick
         instance_destroy();
     }
 }
+lvl = 1;
+typeMonste = 1; //drake=1,snail=2
 </string>
           </argument>
         </arguments>
