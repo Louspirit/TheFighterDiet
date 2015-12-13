@@ -3,7 +3,7 @@
   <spriteName>spr_waiter_p1_idle_left</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>1</depth>
+  <depth>-2</depth>
   <persistent>0</persistent>
   <parentName>obj_waiter_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -103,11 +103,21 @@ idle_left_sprite=spr_waiter_p1_idle_left;
             <string>if(keyboard_check(ord('L')))
 {
     self.hspeed = -self.waiter_speed;
+    // changement de direction, on bouge le serveur au bon endroit
+    if(self.sprite_index != self.left_sprite)
+    {
+        self.x = self.x - 41;
+    }
     self.sprite_index = self.left_sprite;
 }
 if(keyboard_check(ord('M')))
 {
     self.hspeed = self.waiter_speed;
+    // changement de direction, on bouge le serveur au bon endroit
+    if(self.sprite_index != self.right_sprite)
+    {
+        self.x = self.x + 41;
+    }
     self.sprite_index = self.right_sprite;
 }
 if(!keyboard_check(ord('L')) &amp;&amp; !keyboard_check(ord('M')))
