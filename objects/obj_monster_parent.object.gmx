@@ -29,6 +29,7 @@
 attack=1;
 defense=1;
 attack_speed=1;
+image_speed=0.5;
 </string>
           </argument>
         </arguments>
@@ -75,7 +76,7 @@ attack_speed=1;
         <arguments>
           <argument>
             <kind>10</kind>
-            <object>obj_hit</object>
+            <object>-100</object>
           </argument>
           <argument>
             <kind>0</kind>
@@ -111,8 +112,8 @@ attack_speed=1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var hit; //Var for the hit
-hit = instance_create(self.x,self.y,obj_hit); // throw attack
+            <string>var hit=0; //Var for the hit
+hit = instance_create(self.x,self.y,hit); // throw attack
 hit.damage = self.attack; // Put the damage intensity
 hit.speed=1;
 
