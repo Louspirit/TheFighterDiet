@@ -31,6 +31,68 @@ left_sprite=spr_waiter_p1_left;
 right_sprite=spr_waiter_p1_right;
 idle_right_sprite=spr_waiter_p1_idle_right;
 idle_left_sprite=spr_waiter_p1_idle_left;
+initial_position_y=576;
+x_debut_monstre=100;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="11">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(object_exists(obj_waiter_player2)){
+    //if(random(30) &gt;= 15){
+        if (obj_waiter_player2.multiplicateurDirection = 1){
+            obj_waiter_player2.multiplicateurDirection = -1;
+        }
+        else{
+            obj_waiter_player2.multiplicateurDirection = 1;
+        }
+    //}
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(object_exists(obj_waiter_player2)){
+    obj_waiter_player2.multiplicateurDirection = 1;
+}
+/*else{
+
+}*/
 </string>
           </argument>
         </arguments>
@@ -105,7 +167,31 @@ idle_left_sprite=spr_waiter_p1_idle_left;
             <kind>1</kind>
             <string>if(keyboard_check(ord('S')))
 {
+    if(self.multiplicateurDirection = 1){
+        self.hspeed = -self.waiter_speed;
+        self.sprite_index = self.left_sprite;
+    }else{
+        self.hspeed = self.waiter_speed;
+        self.sprite_index = self.right_sprite;
+    }
+}
+if(keyboard_check(ord('D')))
+{
+    if(self.multiplicateurDirection = 1){
+        self.hspeed = self.waiter_speed;
+        self.sprite_index = self.right_sprite;
+    }else{
+        self.hspeed = -self.waiter_speed;
+        self.sprite_index = self.left_sprite;
+    }
     self.hspeed = -self.waiter_speed;
+    // si le serveur est vers la gauche on le fait reculer pour aller vers le monstre
+    if(self.x &lt; x_debut_monstre)
+    {
+        // aller vers l'arrière plan
+        self.vspeed = -self.waiter_speed;
+    }
+        
     // changement de direction, on bouge le serveur au bon endroit
     if(self.sprite_index != self.left_sprite)
     {
@@ -116,6 +202,12 @@ idle_left_sprite=spr_waiter_p1_idle_left;
 if(keyboard_check(ord('D')))
 {
     self.hspeed = self.waiter_speed;
+    // si le serveur a déjà commencé à reculer il faut le faire remonter
+    if(self.x &lt; x_debut_monstre)
+    {
+        // aller vers le premier plan
+        self.vspeed = self.waiter_speed;
+    }
     // changement de direction, on bouge le serveur au bon endroit
     if(self.sprite_index != self.right_sprite)
     {
@@ -126,6 +218,7 @@ if(keyboard_check(ord('D')))
 if(!keyboard_check(ord('S')) &amp;&amp; !keyboard_check(ord('D')))
 {
     self.hspeed = 0;
+    self.vspeed = 0;
     // change to the good orientated idle
     if (self.sprite_index == self.right_sprite)
     {
@@ -135,9 +228,129 @@ if(!keyboard_check(ord('S')) &amp;&amp; !keyboard_check(ord('D')))
     {
         self.sprite_index = self.idle_left_sprite;
     }
+}
 
+if(self.x &gt;= x_debut_monstre)
+{
+    self.y = initial_position_y;
 }
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_inversionCtrl">
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>other</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(object_exists(obj_waiter_player2)){
+    if(random(100) &gt;= 50) {
+        obj_waiter_player2.multiplicateurDirection = -1;
+    }
+}
+/*else{
+
+}*/
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>50</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>11</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>100</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>11</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>150</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>10</string>
           </argument>
         </arguments>
       </action>

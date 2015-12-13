@@ -26,11 +26,65 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
-global.multikeypress=false
+//global.multikeypress=false
 left_sprite=spr_waiter_p1_left;
 right_sprite=spr_waiter_p1_right;
 idle_right_sprite=spr_waiter_p1_idle_right;
 idle_left_sprite=spr_waiter_p1_idle_left;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="11">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//if(random(30) &gt;= 15){
+    if (obj_waiter_player1.multiplicateurDirection = 1){
+        obj_waiter_player1.multiplicateurDirection = -1;
+    }
+    else{
+        obj_waiter_player1.multiplicateurDirection = 1;
+    }
+//}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>obj_waiter_player1.multiplicateurDirection = 1;
 </string>
           </argument>
         </arguments>
@@ -102,6 +156,24 @@ idle_left_sprite=spr_waiter_p1_idle_left;
             <kind>1</kind>
             <string>if(keyboard_check(ord('L')))
 {
+    if(self.multiplicateurDirection = 1){
+        self.hspeed = - self.waiter_speed;
+        self.sprite_index = self.left_sprite;
+    }else{
+        self.hspeed = self.waiter_speed;
+        self.sprite_index = self.right_sprite;
+    }
+    
+}
+if(keyboard_check(ord('M')))
+{
+    if(self.multiplicateurDirection = 1){
+        self.hspeed = self.waiter_speed;
+        self.sprite_index = self.right_sprite;
+    }else{
+        self.hspeed = -self.waiter_speed;
+        self.sprite_index = self.right_sprite;
+    }
     self.hspeed = -self.waiter_speed;
     // changement de direction, on bouge le serveur au bon endroit
     if(self.sprite_index != self.left_sprite)
@@ -135,6 +207,117 @@ if(!keyboard_check(ord('L')) &amp;&amp; !keyboard_check(ord('M')))
 
 }
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_inversionCtrl">
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>other</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(random(100) &gt;= 50) {
+        obj_waiter_player1.multiplicateurDirection = -1;
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>50</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>11</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>100</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>11</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>150</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>10</string>
           </argument>
         </arguments>
       </action>
