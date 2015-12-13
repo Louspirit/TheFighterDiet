@@ -31,6 +31,8 @@ left_sprite=spr_waiter_p1_left;
 right_sprite=spr_waiter_p1_right;
 idle_right_sprite=spr_waiter_p1_idle_right;
 idle_left_sprite=spr_waiter_p1_idle_left;
+initial_position_y=576;
+x_debut_monstre=100;
 </string>
           </argument>
         </arguments>
@@ -106,6 +108,13 @@ idle_left_sprite=spr_waiter_p1_idle_left;
             <string>if(keyboard_check(ord('S')))
 {
     self.hspeed = -self.waiter_speed;
+    // si le serveur est vers la gauche on le fait reculer pour aller vers le monstre
+    if(self.x &lt; x_debut_monstre)
+    {
+        // aller vers l'arrière plan
+        self.vspeed = -self.waiter_speed;
+    }
+        
     // changement de direction, on bouge le serveur au bon endroit
     if(self.sprite_index != self.left_sprite)
     {
@@ -116,6 +125,12 @@ idle_left_sprite=spr_waiter_p1_idle_left;
 if(keyboard_check(ord('D')))
 {
     self.hspeed = self.waiter_speed;
+    // si le serveur a déjà commencé à reculer il faut le faire remonter
+    if(self.x &lt; x_debut_monstre)
+    {
+        // aller vers le premier plan
+        self.vspeed = self.waiter_speed;
+    }
     // changement de direction, on bouge le serveur au bon endroit
     if(self.sprite_index != self.right_sprite)
     {
@@ -126,6 +141,7 @@ if(keyboard_check(ord('D')))
 if(!keyboard_check(ord('S')) &amp;&amp; !keyboard_check(ord('D')))
 {
     self.hspeed = 0;
+    self.vspeed = 0;
     // change to the good orientated idle
     if (self.sprite_index == self.right_sprite)
     {
@@ -135,7 +151,11 @@ if(!keyboard_check(ord('S')) &amp;&amp; !keyboard_check(ord('D')))
     {
         self.sprite_index = self.idle_left_sprite;
     }
+}
 
+if(self.x &gt;= x_debut_monstre)
+{
+    self.y = initial_position_y;
 }
 </string>
           </argument>

@@ -32,7 +32,6 @@ waiter_speed_slow=3;
 waiter_speed=waiter_speed_base;
 image_speed=0.3;
 bag_size=3;
-
 </string>
           </argument>
         </arguments>
