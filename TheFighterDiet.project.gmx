@@ -48,7 +48,6 @@
       <object>objects\obj_waiter_player2</object>
       <object>objects\obj_waiter_player1</object>
       <object>objects\obj_waiter_parent</object>
-      <object>objects\obj_torche</object>
     </objects>
     <objects name="Items">
       <object>objects\obj_fallingItem</object>
@@ -71,8 +70,8 @@
     <objects name="Sounds">
       <object>objects\snd_main_theme</object>
     </objects>
-    <objects name="Dummy">
-      <object>objects\obj_writer_bound</object>
+    <objects name="Decor">
+      <object>objects\obj_torch</object>
     </objects>
   </objects>
   <rooms name="rooms">
