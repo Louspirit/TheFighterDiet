@@ -79,11 +79,21 @@ idle_left_sprite=spr_waiter_p1_idle_left;
             <string>if(keyboard_check(ord('S')))
 {
     self.hspeed = -self.waiter_speed;
+    // changement de direction, on bouge le serveur au bon endroit
+    if(self.sprite_index != self.left_sprite)
+    {
+        self.x = self.x - 41;
+    }
     self.sprite_index = self.left_sprite;
 }
 if(keyboard_check(ord('D')))
 {
     self.hspeed = self.waiter_speed;
+    // changement de direction, on bouge le serveur au bon endroit
+    if(self.sprite_index != self.right_sprite)
+    {
+        self.x = self.x + 41;
+    }
     self.sprite_index = self.right_sprite;
 }
 if(!keyboard_check(ord('S')) &amp;&amp; !keyboard_check(ord('D')))
