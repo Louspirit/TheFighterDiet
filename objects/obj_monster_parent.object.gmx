@@ -31,6 +31,101 @@ defense=27; //réduction de dégats =&gt; (100/100 + Armor) * attack_ennemy = d�
 attack_speed=35; //nb_attack/sec =&gt; 0.175 * (1 + attack_speed)
                  //freq_attack = 1/nb_attack
 image_speed=0.2;
+calorie=0;
+calorie_level_1=10;
+calorie_level_2=30;
+calorie_level_3=50;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// si un aliment a été déposé sur la table
+if(instance_exists(self.table.id_obj_pickable) &amp;&amp; self.table.id_obj_pickable &gt; 0)
+{
+    // on gagne en calorie pour l'évolution
+    calorie += 10;
+    if(calorie &gt;= calorie_level_1 &amp;&amp; calorie &lt; calorie_level_2)
+    {
+        // lvl1
+        // changer niveau perso
+        // TODO self.sprite_index = 
+    }
+    else if(calorie &gt;= calorie_level_2 &amp;&amp; calorie &lt; calorie_level_3)
+    {
+        // lvl2
+        // changer niveau perso
+        // TODO self.sprite_index =         
+    }
+    else if(calorie &gt;= calorie_level_3)
+    {
+        // lvl3
+        // changer niveau perso
+        // TODO self.sprite_index =             
+    }
+    
+    // mettre à jour les stats (force etc..)
+    objet_sur_la_table = self.table.id_obj_pickable.object_index;
+    if(objet_sur_la_table == obj_gigot)
+    { 
+        // si gigot
+        self.attack += 10;
+    }
+    else if(objet_sur_la_table == obj_legume)    
+    {  
+        // si legume
+        self.attack_speed += 10;
+    }
+    else if(objet_sur_la_table == obj_fruit)
+    {    
+        // si fruit 
+        self.defense += 10;
+    }
+      
+    // supprimer l'objet attaché de la table
+    with (self.table.id_obj_pickable) {
+        instance_destroy();
+    }
+}
 </string>
           </argument>
         </arguments>

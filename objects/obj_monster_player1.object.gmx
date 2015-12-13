@@ -52,17 +52,18 @@
             <string>event_inherited();
 if(global.selectionP1 = 0) {
     self.sprite_index = spr_dragon_lvl1_left;  //à modif en right
+    self.table=obj_table_left;
     self.attack = 75;
     self.defense = 17;
     self.attack_speed = 25;
 }
 else{
     self.sprite_index = spr_snail_lvl1_right;
+    self.table=obj_table_right;
     self.attack = 50;
     self.defense = 17;
     self.attack_speed = 50;
 }
-
 
 
 </string>
@@ -120,6 +121,28 @@ with (hit)
           <argument>
             <kind>4</kind>
             <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>

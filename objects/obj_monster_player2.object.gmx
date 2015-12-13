@@ -28,12 +28,14 @@
             <string>event_inherited();
 if(global.selectionP1 = 0) {
     self.sprite_index = spr_dragon_lvl1_left;  //à modif en right
+    self.table=obj_table_left;
     self.attack = 75;
     self.defense = 17;
     self.attack_speed = 25;
 }
 else{
     self.sprite_index = spr_snail_lvl1_right;
+    self.table=obj_table_right;
     self.attack = 50;
     self.defense = 17;
     self.attack_speed = 50;
