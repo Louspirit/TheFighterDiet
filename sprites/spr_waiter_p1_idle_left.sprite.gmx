@@ -17,13 +17,14 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>0</width>
-  <height>0</height>
+  <width>144</width>
+  <height>144</height>
   <frames>
     <frame index="0">images\spr_waiter_p1_idle_left_0.png</frame>
     <frame index="1">images\spr_waiter_p1_idle_left_1.png</frame>
     <frame index="2">images\spr_waiter_p1_idle_left_2.png</frame>
     <frame index="3">images\spr_waiter_p1_idle_left_3.png</frame>
     <frame index="4">images\spr_waiter_p1_idle_left_4.png</frame>
+    <frame index="5">images\spr_waiter_p1_idle_left_5.png</frame>
   </frames>
 </sprite>

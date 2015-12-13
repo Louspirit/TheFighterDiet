@@ -17,8 +17,8 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>0</width>
-  <height>0</height>
+  <width>144</width>
+  <height>144</height>
   <frames>
     <frame index="0">images\spr_waiter_p1_idle_right_0.png</frame>
     <frame index="1">images\spr_waiter_p1_idle_right_1.png</frame>
