@@ -174,15 +174,9 @@ if(other.picked == false){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (instance_exists(attached_item)) {
-if(self.sprite_index == self.right_sprite || self.sprite_index == self.idle_right_sprite){
-    attached_item.x = x + 42;
-    attached_item.y = y + 42;
-    }
-  else  if(self.sprite_index == self.right_sprite || self.sprite_index == self.idle_right_sprite){
-    attached_item.x = x + 42;
-    attached_item.y = y + 42;
-    }
+            <string>if (instance_exists(attached_item) &amp;&amp; attached_item &gt; 0) {
+    attached_item.x = x + lengthdir_x(0, -1 + attached_item.image_angle);
+    attached_item.y = y + lengthdir_y(0, -1 + attached_item.image_angle);
 }
 </string>
           </argument>
