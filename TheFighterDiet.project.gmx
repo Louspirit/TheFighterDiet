@@ -28,6 +28,9 @@
       <sprites name="Power">
         <sprite>sprites\spr_speedUp</sprite>
       </sprites>
+      <sprites name="Hits">
+        <sprite>sprites\spr_hit_lvl1</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -53,9 +56,12 @@
       <objects name="Power">
         <object>objects\obj_speedUp</object>
       </objects>
-      <object>objects\obj_hit</object>
+      <objects name="hits">
+        <object>objects\obj_hit_lvl_1</object>
+        <object>objects\obj_hit_parent</object>
+      </objects>
+      <object>objects\obj_spawner</object>
     </objects>
-    <object>objects\obj_spawner</object>
     <objects name="Sounds">
       <object>objects\snd_main_theme</object>
     </objects>
