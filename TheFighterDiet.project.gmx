@@ -21,11 +21,20 @@
       <sprite>sprites\spr_waiter_p1_idle_left</sprite>
       <sprites name="Monstres">
         <sprites name="MonstreDef">
-          <sprite>sprites\spr_snail_lvl1_left</sprite>
-          <sprite>sprites\spr_snail_lvl1_right</sprite>
+          <sprite>sprites\spr_snail_lvl2_idle_right</sprite>
+          <sprite>sprites\spr_snail_lvl2_idle_left</sprite>
+          <sprite>sprites\spr_snail_lvl2_attack_right</sprite>
+          <sprite>sprites\spr_snail_lvl2_attack_left</sprite>
+          <sprite>sprites\spr_snail_lvl1_idle_left</sprite>
+          <sprite>sprites\spr_snail_lvl1_idle_right</sprite>
+          <sprite>sprites\spr_snail_lvl1_attack_left</sprite>
+          <sprite>sprites\spr_snail_lvl1_attack_right</sprite>
         </sprites>
         <sprites name="MonstreAtk">
-          <sprite>sprites\spr_dragon_lvl1_left</sprite>
+          <sprite>sprites\spr_drake_lvl1_idle_left</sprite>
+          <sprite>sprites\spr_drake_lvl1_idle_right</sprite>
+          <sprite>sprites\spr_drake_lvl1_attack_left</sprite>
+          <sprite>sprites\spr_drake_lvl1_attack_right</sprite>
         </sprites>
       </sprites>
     </sprites>
@@ -42,7 +51,12 @@
         <sprite>sprites\spr_inversionCtrl</sprite>
       </sprites>
       <sprites name="Hits">
-        <sprite>sprites\spr_drake_hit_lvl1</sprite>
+        <sprite>sprites\spr_drake_hit_lvl1_left</sprite>
+        <sprite>sprites\spr_drake_hit_lvl1_right</sprite>
+        <sprite>sprites\spr_snail_hit_lvl2_right</sprite>
+        <sprite>sprites\spr_snail_hit_lvl2_left</sprite>
+        <sprite>sprites\spr_snail_hit_lvl1_left</sprite>
+        <sprite>sprites\spr_snail_hit_lvl1_right</sprite>
       </sprites>
       <sprites name="Decor">
         <sprite>sprites\spr_torche</sprite>
@@ -96,8 +110,8 @@
         <object>objects\obj_inversionCtrl</object>
       </objects>
       <objects name="hits">
-        <object>objects\obj_hit_lvl_1</object>
         <object>objects\obj_hit_parent</object>
+        <object>objects\obj_hit</object>
       </objects>
       <object>objects\obj_spawner</object>
       <object>objects\obj_pickable</object>

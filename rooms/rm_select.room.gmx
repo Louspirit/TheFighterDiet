@@ -12,7 +12,7 @@
   <showcolour>-1</showcolour>
   <code>global.nbMonstre = 2;
 global.selectionP1 = 0;
-global.selectionP2 = 0;
+global.selectionP2 = 1;
 
 tmp = random(global.nbMonstre);
 
@@ -66,6 +66,7 @@ else{
     <instance objName="obj_caseMonstreDragon" x="224" y="224" name="inst_CF3444B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_caseMonstreSnail" x="288" y="224" name="inst_9F5EA470" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fleche_selectionP1" x="224" y="192" name="inst_5BD075DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fleche_selectionP2" x="288" y="192" name="inst_F3BB9D73" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

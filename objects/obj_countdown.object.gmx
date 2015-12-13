@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>time = 4;
+            <string>//time
+time = 4;
 </string>
           </argument>
         </arguments>
@@ -72,7 +73,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>time -= 1;
+            <string>//time
+time -= 1;
 </string>
           </argument>
         </arguments>
