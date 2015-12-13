@@ -387,6 +387,7 @@ if(self.x &gt;= x_debut_monstre)
           <argument>
             <kind>1</kind>
             <string>if(object_exists(obj_waiter_player2)){
+    
     obj_waiter_player2.waiter_speed = 0;
 }
 /*else{
