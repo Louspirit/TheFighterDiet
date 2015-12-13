@@ -71,6 +71,9 @@
     <objects name="Sounds">
       <object>objects\snd_main_theme</object>
     </objects>
+    <objects name="Dummy">
+      <object>objects\obj_writer_bound</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_dining_room</room>

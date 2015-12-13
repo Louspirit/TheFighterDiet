@@ -29,6 +29,7 @@
 attack=1;
 defense=1;
 attack_speed=1;
+image_speed=0.2;
 </string>
           </argument>
         </arguments>
