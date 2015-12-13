@@ -141,12 +141,14 @@ else if(choixFood &gt;= def &amp;&amp; choixFood &lt; vit){
     instance_create(random(room_width), 20, obj_fruit);
 }*/
 
-nb_power = 3;
+nb_power = 4;
 choixPower = random(nb_power);
+//choixPower = 3;
 
 speedUp = 0;
 slow = 1;
 stun = 2;
+inversionCtrl = 3;
 
 if(choixPower &gt;=speedUp &amp;&amp; choixPower &lt; slow){
     instance_create(room_width/2, 20, obj_speedUp);
@@ -154,8 +156,11 @@ if(choixPower &gt;=speedUp &amp;&amp; choixPower &lt; slow){
 else if(choixPower &gt;= slow &amp;&amp; choixPower &lt; stun){
     instance_create(room_width/2, 20, obj_slow);
 }
-else{
+else if(choixPower &gt;= stun &amp;&amp; choixPower &lt; inversionCtrl){
     instance_create(room_width/2, 20, obj_stun);
+}
+else{
+    instance_create(room_width/2, 20, obj_inversionCtrl);
 }
 
 
