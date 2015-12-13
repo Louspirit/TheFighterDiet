@@ -30,7 +30,6 @@
       </sprites>
     </sprites>
     <sprites name="Items">
-      <sprite>sprites\spr_fallingItem</sprite>
       <sprites name="Food">
         <sprite>sprites\spr_gigot</sprite>
         <sprite>sprites\spr_legume</sprite>
@@ -45,7 +44,10 @@
       <sprites name="Hits">
         <sprite>sprites\spr_hit_lvl1</sprite>
       </sprites>
-      <sprite>sprites\spr_torche</sprite>
+      <sprites name="Decor">
+        <sprite>sprites\spr_torche</sprite>
+        <sprite>sprites\spr_table</sprite>
+      </sprites>
     </sprites>
     <sprites name="Label">
       <sprite>sprites\spr_label_victory_p1</sprite>
@@ -97,6 +99,7 @@
         <object>objects\obj_hit_parent</object>
       </objects>
       <object>objects\obj_spawner</object>
+      <object>objects\obj_pickable</object>
     </objects>
     <objects name="Sounds">
       <object>objects\snd_main_theme</object>
@@ -105,6 +108,7 @@
     </objects>
     <objects name="Decor">
       <object>objects\obj_torch</object>
+      <object>objects\obj_table</object>
     </objects>
     <objects name="Texts">
       <object>objects\obj_draw_victory</object>
@@ -125,7 +129,7 @@
     <rtf>help.rtf</rtf>
   </help>
   <TutorialState>
-    <IsTutorial>-1</IsTutorial>
+    <IsTutorial>0</IsTutorial>
     <TutorialName>C:\Users\Guillaume\AppData\Local\GameMaker-Studio\tutorials\HTML5_Scaling\</TutorialName>
     <TutorialPage>0</TutorialPage>
   </TutorialState>
