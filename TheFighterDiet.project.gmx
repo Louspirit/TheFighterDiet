@@ -25,7 +25,7 @@
           <sprite>sprites\spr_snail_lvl1_right</sprite>
         </sprites>
         <sprites name="MonstreAtk">
-          <sprite>sprites\spr_dragon_llvl1_left</sprite>
+          <sprite>sprites\spr_dragon_lvl1_left</sprite>
         </sprites>
       </sprites>
     </sprites>
@@ -129,7 +129,7 @@
     <rtf>help.rtf</rtf>
   </help>
   <TutorialState>
-    <IsTutorial>0</IsTutorial>
+    <IsTutorial>-1</IsTutorial>
     <TutorialName>C:\Users\Guillaume\AppData\Local\GameMaker-Studio\tutorials\HTML5_Scaling\</TutorialName>
     <TutorialPage>0</TutorialPage>
   </TutorialState>
