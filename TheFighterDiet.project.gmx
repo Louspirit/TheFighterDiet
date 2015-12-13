@@ -12,13 +12,15 @@
   <sprites name="sprites">
     <sprites name="Character">
       <sprite>sprites\spr_waiter_p1_right</sprite>
+      <sprite>sprites\spr_waiter_p2_idle_right</sprite>
+      <sprite>sprites\spr_waiter_p2_left</sprite>
+      <sprite>sprites\spr_waiter_p2_right</sprite>
+      <sprite>sprites\spr_waiter_p2_idle_left</sprite>
       <sprite>sprites\spr_monster_player1</sprite>
       <sprite>sprites\spr_monster_player2</sprite>
-      <sprite>sprites\spr_waiter_player2</sprite>
       <sprite>sprites\spr_waiter_p1_left</sprite>
       <sprite>sprites\spr_waiter_p1_idle_right</sprite>
       <sprite>sprites\spr_waiter_p1_idle_left</sprite>
-      <sprite>sprites\spr_hit_normal</sprite>
       <sprites name="Monstres">
         <sprites name="MonstreDef">
           <sprite>sprites\spr_snail_lvl1_left</sprite>
