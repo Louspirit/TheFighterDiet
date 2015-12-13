@@ -157,7 +157,7 @@ if(other.picked == false){
         <isnot>0</isnot>
       </action>
     </event>
-    <event eventtype="8" enumb="73">
+    <event eventtype="8" enumb="72">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -175,8 +175,14 @@ if(other.picked == false){
           <argument>
             <kind>1</kind>
             <string>if (instance_exists(attached_item) &amp;&amp; attached_item &gt; 0) {
-    attached_item.x = x + lengthdir_x(0, -1 + attached_item.image_angle);
-    attached_item.y = y + lengthdir_y(0, -1 + attached_item.image_angle);
+    if(self.sprite_index == self.left_sprite or self.sprite_index == self.idle_left_sprite){
+        attached_item.x = x + lengthdir_x(75, 180);
+        attached_item.y = y - lengthdir_y(40, 90);
+    }
+    if(self.sprite_index == self.right_sprite or self.sprite_index == self.idle_right_sprite){
+        attached_item.x = x + lengthdir_x(45, -1);
+        attached_item.y = y - lengthdir_y(40, 90);
+    }
 }
 </string>
           </argument>
