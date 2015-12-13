@@ -85,6 +85,8 @@
     </objects>
     <objects name="Sounds">
       <object>objects\snd_main_theme</object>
+      <object>objects\snd_powerup_theme</object>
+      <object>objects\snd_slow_theme</object>
     </objects>
     <objects name="Decor">
       <object>objects\obj_torch</object>
