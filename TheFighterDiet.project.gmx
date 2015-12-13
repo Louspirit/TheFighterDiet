@@ -27,6 +27,8 @@
       </sprites>
       <sprites name="Power">
         <sprite>sprites\spr_speedUp</sprite>
+        <sprite>sprites\spr_slow</sprite>
+        <sprite>sprites\spr_stun</sprite>
       </sprites>
       <sprite>sprites\spr_torche</sprite>
     </sprites>
@@ -54,6 +56,8 @@
       </objects>
       <objects name="Power">
         <object>objects\obj_speedUp</object>
+        <object>objects\obj_slow</object>
+        <object>objects\obj_stun</object>
       </objects>
       <object>objects\obj_hit</object>
     </objects>
