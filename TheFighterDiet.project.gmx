@@ -31,6 +31,10 @@
         <sprite>sprites\spr_stun</sprite>
         <sprite>sprites\spr_inversionCtrl</sprite>
       </sprites>
+      <sprites name="Hits">
+        <sprite>sprites\spr_hit_lvl1</sprite>
+      </sprites>
+      <sprite>sprites\spr_torche</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -59,17 +63,21 @@
         <object>objects\obj_stun</object>
         <object>objects\obj_inversionCtrl</object>
       </objects>
-      <object>objects\obj_hit</object>
+      <objects name="hits">
+        <object>objects\obj_hit_lvl_1</object>
+        <object>objects\obj_hit_parent</object>
+      </objects>
+      <object>objects\obj_spawner</object>
     </objects>
-    <object>objects\obj_spawner</object>
     <objects name="Sounds">
       <object>objects\snd_main_theme</object>
     </objects>
+    <objects name="Decor">
+      <object>objects\obj_torch</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_test1</room>
-    <room>rooms\rm_DiningRoom</room>
-    <room>rooms\rm_test</room>
+    <room>rooms\rm_dining_room</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
