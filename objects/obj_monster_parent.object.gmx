@@ -36,6 +36,7 @@ calorie_level_1=10;
 calorie_level_2=30;
 calorie_level_3=50;
 current_item=-1;
+table=-1;
 </string>
           </argument>
         </arguments>
@@ -59,9 +60,7 @@ current_item=-1;
           <argument>
             <kind>1</kind>
             <string>// si un aliment a été déposé sur la table
-clementA = self.table.id_obj_pickable;
-clement = current_item;
-if(self.table.id_obj_pickable &gt; 0 &amp;&amp; current_item == -1)
+if(table.id_obj_pickable &gt; 0 &amp;&amp; current_item == -1)
 {
     // on gagne en calorie pour l'évolution
     calorie += 10;
@@ -85,30 +84,25 @@ if(self.table.id_obj_pickable &gt; 0 &amp;&amp; current_item == -1)
     }
     
     // mettre à jour les stats (force etc..)
-    objet_sur_la_table = self.table.id_obj_pickable.object_index;
+    objet_sur_la_table = table.id_obj_pickable.object_index;
     if(objet_sur_la_table == obj_gigot)
     { 
         // si gigot
-        self.attack += 10;
+        attack += 10;
     }
     else if(objet_sur_la_table == obj_legume)    
     {  
         // si legume
-        self.attack_speed += 10;
+        attack_speed += 10;
     }
     else if(objet_sur_la_table == obj_fruit)
     {    
         // si fruit 
-        self.defense += 10;
+        defense += 10;
     }
-      
-    // supprimer l'objet attaché de la table
-    self.current_item = self.table.id_obj_pickable;
     
-    alarm[0] = 60;
+    current_item = table.id_obj_pickable;
 }
-lvl = 1;
-typeMonste = 1; //drake=1,snail=2
 </string>
           </argument>
         </arguments>

@@ -35,6 +35,30 @@
       </action>
       <action>
         <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>30</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>1</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -64,6 +88,60 @@ else{
     self.defense = 60;
     self.attack_speed = 33;
     self.typeMonstre = 2;
+}
+table=obj_table_left;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>30</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>1</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(current_item&gt;0)
+{
+    current_item.y = 5;
+    current_item = -1;
+    table.id_obj_pickable = -1;
 }
 
 </string>
@@ -122,6 +200,23 @@ if(self.typeMonstre = 1) { //drake
         self.sprite_index = spr_drake_lvl1_attack_left;
         self.image_index = 0;
     }
+    else if(self.lvl = 2){
+        hit = instance_create(self.x+133,self.y+327,obj_hit_parent); // throw attack
+        hit.sprite_index=spr_drake_hit_lvl2_left;
+        
+        //Create event
+        self.sprite_index = spr_drake_lvl2_attack_left;
+        self.image_index = 0;
+    }
+    else
+    {
+        hit = instance_create(self.x+133,self.y+327,obj_hit_parent); // throw attack
+        hit.sprite_index=spr_drake_hit_lvl4_left;
+        
+        //Create event
+        self.sprite_index = spr_drake_lvl4_attack_left;
+        self.image_index = 0;
+    }
 }else{ //snail
 //modif snail et lvl
     if(self.lvl = 1){
@@ -132,9 +227,18 @@ if(self.typeMonstre = 1) { //drake
         self.sprite_index = spr_snail_lvl1_attack_left;
         self.image_index = 0;
     }
-    if(self.lvl = 2){
+    else if(self.lvl = 2){
         hit = instance_create(self.x+133,self.y+327,obj_hit_parent); // throw attack
         hit.sprite_index=spr_snail_hit_lvl2_left;
+        
+        //Create event
+        self.sprite_index = spr_snail_lvl2_attack_left;
+        self.image_index = 0;
+    }
+    else
+    {
+        hit = instance_create(self.x+133,self.y+327,obj_hit_parent); // throw attack
+        hit.sprite_index=spr_snail_lvl2_attack_left;
         
         //Create event
         self.sprite_index = spr_snail_lvl2_attack_left;
@@ -170,17 +274,22 @@ with (hit)
           <argument>
             <kind>1</kind>
             <string>//Step event
+event_inherited();
 if (image_index = 3){
     if(self.typeMonstre = 1){ //drake
         switch (self.lvl)
         {
         case 1:image_index = 0; sprite_index = spr_drake_lvl1_idle_left; break;
+        case 2:image_index = 0; sprite_index = spr_drake_lvl2_idle_left; break;
+        case 3:image_index = 0; sprite_index = spr_drake_lvl4_idle_left; break;
         //default:sprite_index = spr_drake_lvl2_idle_left;
         }
     }else{ //snail
         switch (self.lvl)
         {
         case 1:image_index = 0; sprite_index = spr_snail_lvl1_idle_left; break;
+        case 2:image_index = 0; sprite_index = spr_snail_lvl2_idle_left; break;
+        case 3:image_index = 0; sprite_index = spr_snail_lvl3_idle_left; break;
         //default:sprite_index = spr_snail_lvl2_idle_left;
         }
     }
