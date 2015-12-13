@@ -61,8 +61,8 @@ if(global.selectionP1 = 0) {
 else{
     self.sprite_index = spr_snail_lvl1_idle_left;
     self.attack = 50;
-    self.defense = 17;
-    self.attack_speed = 50;
+    self.defense = 60;
+    self.attack_speed = 33;
     self.typeMonstre = 2;
 }
 
@@ -113,23 +113,31 @@ else{
           <argument>
             <kind>1</kind>
             <string>var hit; //Var for the hit
-if(self.typeMonstre = 1) {
+if(self.typeMonstre = 1) { //drake
     if(self.lvl = 1){
-        hit = instance_create(self.x,self.y,obj_hit_parent); // throw attack
+        hit = instance_create(self.x+55,self.y+345,obj_hit_parent); // throw attack
         hit.sprite_index=spr_drake_hit_lvl1_left;
         
         //Create event
         self.sprite_index = spr_drake_lvl1_attack_left;
         self.image_index = 0;
     }
-}else{
+}else{ //snail
 //modif snail et lvl
     if(self.lvl = 1){
-        hit = instance_create(self.x,self.y,obj_hit_parent); // throw attack
+        hit = instance_create(self.x+53,self.y+340,obj_hit_parent); // throw attack
         hit.sprite_index=spr_snail_hit_lvl1_left;
         
         //Create event
         self.sprite_index = spr_snail_lvl1_attack_left;
+        self.image_index = 0;
+    }
+    if(self.lvl = 2){
+        hit = instance_create(self.x+133,self.y+327,obj_hit_parent); // throw attack
+        hit.sprite_index=spr_snail_hit_lvl2_left;
+        
+        //Create event
+        self.sprite_index = spr_snail_lvl2_attack_left;
         self.image_index = 0;
     }
 }

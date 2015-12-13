@@ -77,10 +77,10 @@
             <kind>1</kind>
             <string>//Decrease health
 if(other.thrower != self.object_index){
-    real_damage = other.damage - defense
-    if(real_damage &lt;= 0){
+    real_damage = other.damage * (100/100 + defense)
+    /*if(real_damage &lt;= 0){
         real_damage = 1;
-    }
+    }*/
     health = health - real_damage
     toto = health;
     if(health&lt;=0){
