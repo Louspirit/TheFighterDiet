@@ -111,7 +111,6 @@
       </objects>
       <objects name="hits">
         <object>objects\obj_hit_parent</object>
-        <object>objects\obj_hit</object>
       </objects>
       <object>objects\obj_spawner</object>
       <object>objects\obj_pickable</object>
