@@ -6,6 +6,8 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\main_theme</sound>
+    <sound>sound\slow_theme</sound>
+    <sound>sound\powerup_theme</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Character">
@@ -17,6 +19,15 @@
       <sprite>sprites\spr_waiter_p1_idle_right</sprite>
       <sprite>sprites\spr_waiter_p1_idle_left</sprite>
       <sprite>sprites\spr_hit_normal</sprite>
+      <sprites name="Monstres">
+        <sprites name="MonstreDef">
+          <sprite>sprites\spr_snail_lvl1_left</sprite>
+          <sprite>sprites\spr_snail_lvl1_right</sprite>
+        </sprites>
+        <sprites name="MonstreAtk">
+          <sprite>sprites\spr_dragon_llvl1_left</sprite>
+        </sprites>
+      </sprites>
     </sprites>
     <sprites name="Items">
       <sprites name="Food">
@@ -40,6 +51,12 @@
       <sprite>sprites\spr_label_victory_p2</sprite>
       <sprite>sprites\spr_label_victory_IA</sprite>
       <sprite>sprites\spr_label_victory_solo</sprite>
+    </sprites>
+    <sprites name="Case">
+      <sprite>sprites\spr_caseMonstreDragon</sprite>
+      <sprite>sprites\spr_fleche_selectionP1</sprite>
+      <sprite>sprites\spr_fleche_selectionP2</sprite>
+      <sprite>sprites\spr_caseMonstreSnail</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -83,6 +100,8 @@
     </objects>
     <objects name="Sounds">
       <object>objects\snd_main_theme</object>
+      <object>objects\snd_powerup_theme</object>
+      <object>objects\snd_slow_theme</object>
     </objects>
     <objects name="Decor">
       <object>objects\obj_torch</object>
@@ -90,8 +109,16 @@
     <objects name="Texts">
       <object>objects\obj_draw_victory</object>
     </objects>
+    <objects name="Case">
+      <object>objects\obj_caseMonstreDragon</object>
+      <object>objects\obj_fleche_selectionP1</object>
+      <object>objects\obj_fleche_selectionP2</object>
+      <object>objects\obj_caseMonstreSnail</object>
+    </objects>
+    <object>objects\obj_countdown</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_select</room>
     <room>rooms\rm_dining_room</room>
   </rooms>
   <help>
