@@ -131,7 +131,7 @@ idle_left_sprite=spr_waiter_p2_idle_left;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(keyboard_check(ord('L')))
+            <string>if(keyboard_check(vk_left))
 {
     if(self.multiplicateurDirection = 1){
         self.hspeed = - self.waiter_speed;
@@ -142,7 +142,7 @@ idle_left_sprite=spr_waiter_p2_idle_left;
     }
     
 }
-if(keyboard_check(ord('M')))
+if(keyboard_check(vk_right))
 {
     if(self.multiplicateurDirection = 1){
         self.hspeed = self.waiter_speed;
@@ -159,7 +159,7 @@ if(keyboard_check(ord('M')))
     }
     self.sprite_index = self.left_sprite;
 }
-if(keyboard_check(ord('M')))
+if(keyboard_check(vk_right))
 {
     self.hspeed = self.waiter_speed;
     // changement de direction, on bouge le serveur au bon endroit
@@ -169,7 +169,7 @@ if(keyboard_check(ord('M')))
     }
     self.sprite_index = self.right_sprite;
 }
-if(!keyboard_check(ord('L')) &amp;&amp; !keyboard_check(ord('M')))
+if(!keyboard_check(vk_left) &amp;&amp; !keyboard_check(vk_right))
 {
     self.hspeed = 0;
     // change to the good orientated idle
