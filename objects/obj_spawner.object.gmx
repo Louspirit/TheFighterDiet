@@ -219,14 +219,14 @@ choixFood = random(nb_stat);
 atk = 0;
 def = 1;
 vit = 2;
-
+table_width = 144+15;
 if(choixFood &gt;= atk &amp;&amp; choixFood &lt; def){
-    instance_create(random(room_width), 20, obj_gigot);
+    instance_create(random_range(table_width,room_width-table_width), 20, obj_gigot);
 }
 else if(choixFood &gt;= def &amp;&amp; choixFood &lt; vit){
-    instance_create(random(room_width), 20, obj_legume);
+    instance_create(random_range(table_width,room_width-table_width), 20, obj_legume);
 }else{
-    instance_create(random(room_width), 20, obj_fruit);
+    instance_create(random_range(table_width,room_width-table_width), 20, obj_fruit);
 }
 
 

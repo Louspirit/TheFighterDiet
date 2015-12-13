@@ -129,6 +129,7 @@
     </objects>
     <objects name="Texts">
       <object>objects\obj_draw_victory</object>
+      <object>objects\obj_countdown</object>
     </objects>
     <objects name="Case">
       <object>objects\obj_caseMonstreDragon</object>
@@ -136,7 +137,6 @@
       <object>objects\obj_fleche_selectionP2</object>
       <object>objects\obj_caseMonstreSnail</object>
     </objects>
-    <object>objects\obj_countdown</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_select</room>
