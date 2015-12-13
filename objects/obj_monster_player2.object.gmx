@@ -31,7 +31,8 @@ with (hit)
 { 
     //Hit goes to the left
    speed = -10;
-  
+   damage = other.attack;
+   thrower = other.object_index;
 }
 </string>
           </argument>

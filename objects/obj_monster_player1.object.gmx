@@ -30,6 +30,8 @@ hit = instance_create(self.x,self.y,obj_hit_lvl_1); // throw attack
 with (hit)
 {  //Hit goes to the right
    speed = 10;
+   damage = other.attack;
+   thrower = other.object_index;
 }
 </string>
           </argument>
