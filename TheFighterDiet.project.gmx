@@ -27,10 +27,13 @@
       </sprites>
       <sprites name="Power">
         <sprite>sprites\spr_speedUp</sprite>
+        <sprite>sprites\spr_slow</sprite>
+        <sprite>sprites\spr_stun</sprite>
       </sprites>
       <sprites name="Hits">
         <sprite>sprites\spr_hit_lvl1</sprite>
       </sprites>
+      <sprite>sprites\spr_torche</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -45,6 +48,7 @@
       <object>objects\obj_waiter_player2</object>
       <object>objects\obj_waiter_player1</object>
       <object>objects\obj_waiter_parent</object>
+      <object>objects\obj_torche</object>
     </objects>
     <objects name="Items">
       <object>objects\obj_fallingItem</object>
@@ -55,6 +59,8 @@
       </objects>
       <objects name="Power">
         <object>objects\obj_speedUp</object>
+        <object>objects\obj_slow</object>
+        <object>objects\obj_stun</object>
       </objects>
       <objects name="hits">
         <object>objects\obj_hit_lvl_1</object>
@@ -69,6 +75,7 @@
   <rooms name="rooms">
     <room>rooms\rm_test1</room>
     <room>rooms\rm_DiningRoom</room>
+    <room>rooms\rm_dining_room</room>
     <room>rooms\rm_test</room>
   </rooms>
   <help>
