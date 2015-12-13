@@ -83,7 +83,7 @@ if(self.id_obj_pickable == -1 &amp;&amp; other.attached_item &gt; 0){
           <argument>
             <kind>1</kind>
             <string>if (instance_exists(id_obj_pickable) &amp;&amp; id_obj_pickable &gt; 0) {
-    id_obj_pickable.x = x;
+    id_obj_pickable.x = x + 72;
     id_obj_pickable.y = y;
 }
 </string>
