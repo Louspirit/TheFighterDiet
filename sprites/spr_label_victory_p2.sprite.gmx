@@ -7,18 +7,18 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>4</bbox_left>
-  <bbox_right>504</bbox_right>
-  <bbox_top>3</bbox_top>
-  <bbox_bottom>93</bbox_bottom>
+  <bbox_left>8</bbox_left>
+  <bbox_right>489</bbox_right>
+  <bbox_top>8</bbox_top>
+  <bbox_bottom>121</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>505</width>
-  <height>94</height>
+  <width>498</width>
+  <height>130</height>
   <frames>
     <frame index="0">images\spr_label_victory_p2_0.png</frame>
   </frames>
