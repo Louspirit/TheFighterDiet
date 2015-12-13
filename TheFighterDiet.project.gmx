@@ -46,7 +46,8 @@
       </sprites>
       <sprites name="Decor">
         <sprite>sprites\spr_torche</sprite>
-        <sprite>sprites\spr_table</sprite>
+        <sprite>sprites\spr_table_left</sprite>
+        <sprite>sprites\spr_table_right</sprite>
       </sprites>
     </sprites>
     <sprites name="Label">
@@ -108,7 +109,9 @@
     </objects>
     <objects name="Decor">
       <object>objects\obj_torch</object>
-      <object>objects\obj_table</object>
+      <object>objects\obj_table_left</object>
+      <object>objects\obj_table_right</object>
+      <object>objects\obj_table_parent</object>
     </objects>
     <objects name="Texts">
       <object>objects\obj_draw_victory</object>
