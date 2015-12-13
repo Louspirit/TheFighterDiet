@@ -122,14 +122,14 @@
     <object>objects\obj_countdown</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_select</room>
     <room>rooms\rm_dining_room</room>
+    <room>rooms\rm_select</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
   <TutorialState>
-    <IsTutorial>0</IsTutorial>
+    <IsTutorial>-1</IsTutorial>
     <TutorialName>C:\Users\Guillaume\AppData\Local\GameMaker-Studio\tutorials\HTML5_Scaling\</TutorialName>
     <TutorialPage>0</TutorialPage>
   </TutorialState>
