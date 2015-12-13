@@ -61,8 +61,8 @@ if(global.selectionP1 = 0) {
 else{
     self.sprite_index = spr_snail_lvl1_idle_left;
     self.attack = 50;
-    self.defense = 17;
-    self.attack_speed = 50;
+    self.defense = 60;
+    self.attack_speed = 33;
     self.typeMonstre = 2;
 }
 
