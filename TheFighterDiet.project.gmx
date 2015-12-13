@@ -6,6 +6,8 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\main_theme</sound>
+    <sound>sound\slow_theme</sound>
+    <sound>sound\powerup_theme</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Character">
