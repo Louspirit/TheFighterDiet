@@ -26,7 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
-global.multikeypress=false
 left_sprite=spr_waiter_p1_left;
 right_sprite=spr_waiter_p1_right;
 idle_right_sprite=spr_waiter_p1_idle_right;

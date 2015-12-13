@@ -25,7 +25,7 @@
           <sprite>sprites\spr_snail_lvl1_right</sprite>
         </sprites>
         <sprites name="MonstreAtk">
-          <sprite>sprites\spr_dragon_llvl1_left</sprite>
+          <sprite>sprites\spr_dragon_lvl1_left</sprite>
         </sprites>
       </sprites>
     </sprites>
