@@ -266,34 +266,38 @@ if(self.typeMonstre = 1) { //drake
     }
 }
 
-with (hit){
-    if(obj_monster_player2.typeMonstre = 1){ //drake
-        if(obj_monster_player2.lvl = 1){
-            move_towards_point(obj_monster_player2.x + 362,obj_monster_player2.y + 359,global.hit_speed);
-        }else if(obj_monster_player2.lvl = 2){
-            move_towards_point(obj_monster_player2.x + 293,obj_monster_player2.y + 325,global.hit_speed);
-        }else if(obj_monster_player2.lvl = 3){
-            move_towards_point(obj_monster_player2.x + 270,obj_monster_player2.y + 264,global.hit_speed);
-        }else if(obj_monster_player2.lvl = 4){
-            move_towards_point(obj_monster_player2.x + 231,obj_monster_player2.y + 217,global.hit_speed);
-        }
-    }else{ //snail
-        if(obj_monster_player2.lvl = 1){
-            move_towards_point(obj_monster_player2.x + 351,obj_monster_player2.y + 353,global.hit_speed);
-        }else if(obj_monster_player2.lvl = 2){
-            move_towards_point(obj_monster_player2.x + 286,obj_monster_player2.y + 342,global.hit_speed);
-        }else if(obj_monster_player2.lvl = 3){
-            move_towards_point(obj_monster_player2.x + 177,obj_monster_player2.y + 272,global.hit_speed);
-        }else if(obj_monster_player2.lvl = 4){
-            move_towards_point(obj_monster_player2.x + 196,obj_monster_player2.y + 235,global.hit_speed);
+// on vérifie si le monstre adverse n'est pas mort, si il est mort aucun tir ne doit être envoyé
+if(instance_exists(obj_monster_player2))
+{
+    with (hit){
+        if(obj_monster_player2.typeMonstre = 1){ //drake
+            if(obj_monster_player2.lvl = 1){
+                move_towards_point(obj_monster_player2.x + 362,obj_monster_player2.y + 359,global.hit_speed);
+            }else if(obj_monster_player2.lvl = 2){
+                move_towards_point(obj_monster_player2.x + 293,obj_monster_player2.y + 325,global.hit_speed);
+            }else if(obj_monster_player2.lvl = 3){
+                move_towards_point(obj_monster_player2.x + 270,obj_monster_player2.y + 264,global.hit_speed);
+            }else if(obj_monster_player2.lvl = 4){
+                move_towards_point(obj_monster_player2.x + 231,obj_monster_player2.y + 217,global.hit_speed);
+            }
+        }else{ //snail
+            if(obj_monster_player2.lvl = 1){
+                move_towards_point(obj_monster_player2.x + 351,obj_monster_player2.y + 353,global.hit_speed);
+            }else if(obj_monster_player2.lvl = 2){
+                move_towards_point(obj_monster_player2.x + 286,obj_monster_player2.y + 342,global.hit_speed);
+            }else if(obj_monster_player2.lvl = 3){
+                move_towards_point(obj_monster_player2.x + 177,obj_monster_player2.y + 272,global.hit_speed);
+            }else if(obj_monster_player2.lvl = 4){
+                move_towards_point(obj_monster_player2.x + 196,obj_monster_player2.y + 235,global.hit_speed);
+            }
         }
     }
-}
-
-with (hit)
-{  //Hit goes to the right
-   damage = other.attack;
-   thrower = other.object_index;
+    
+    with (hit)
+    {  //Hit goes to the right
+       damage = other.attack;
+       thrower = other.object_index;
+    }
 }
 </string>
           </argument>
