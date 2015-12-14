@@ -206,6 +206,7 @@ if(self.typeMonstre = 1) { //drake
         
         //Create event
         self.sprite_index = spr_drake_lvl2_attack_left;
+        // y - 22 (see origin)
         self.image_index = 0;
     }
     else if(self.lvl = 3){
@@ -214,6 +215,7 @@ if(self.typeMonstre = 1) { //drake
         
         //Create event
         self.sprite_index = spr_drake_lvl3_attack_left;
+        //y - 38 (see origin)
         self.image_index = 0;
     }
     else if(self.lvl = 4) //à changer en 4
@@ -223,6 +225,7 @@ if(self.typeMonstre = 1) { //drake
         
         //Create event
         self.sprite_index = spr_drake_lvl4_attack_left;
+        // y - 78 (see origin)
         self.image_index = 0;
     }
 }else{ //snail
