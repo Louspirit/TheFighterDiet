@@ -82,9 +82,6 @@ if(other.thrower != self.object_index){
         real_damage = 1;
     }*/
     health = health - real_damage;
-    //Health bar
-    maxHealth = 100;
-   draw_healthbar(100, 100, 500, 200, maxHealth, c_black, c_red, c_lime, 0, true, true); 
    //Manage death
      if(health&lt;=0){
         action_create_object(obj_draw_victory , view_xview[0]+ (view_wview[0] / 2), view_yview[0] + (view_hview[0] / 2));
