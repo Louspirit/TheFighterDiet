@@ -154,6 +154,30 @@ table=obj_table_right;
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>30/(0.175 * (1+(attack_speed/100)))</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -186,15 +210,15 @@ if(self.typeMonstre = 1) {
         self.sprite_index = spr_drake_lvl2_attack_right;
         self.image_index = 0;
     }
-    /*else if(self.lvl = 3){
-        hit = instance_create(self.x+225,self.y+281,obj_hit_parent); // throw attack
+    else if(self.lvl = 3){
+        hit = instance_create(self.x+223,self.y+192,obj_hit_parent); // throw attack
         hit.sprite_index=spr_drake_hit_lvl3_right;
         
         //Create event
         self.sprite_index = spr_drake_lvl3_attack_right;
         self.image_index = 0;
-    }*/
-    else if(self.lvl = 3) //A changer en 4
+    }
+    else if(self.lvl = 4)
     {
         hit = instance_create(self.x+53,self.y+87,obj_hit_parent); // throw attack
         hit.sprite_index=spr_drake_hit_lvl4_right;
@@ -222,54 +246,54 @@ if(self.typeMonstre = 1) {
         self.image_index = 0;
     }
     else if(self.lvl = 3){
-        hit = instance_create(self.x+133,self.y+327,obj_hit_parent); // throw attack
-        hit.sprite_index=spr_snail_hit_lvl2_right; //A changer en 3
+        hit = instance_create(self.x+51,self.y+186,obj_hit_parent); // throw attack
+        hit.sprite_index=spr_snail_hit_lvl3_right;
         
         //Create event
-        self.sprite_index = spr_snail_lvl2_attack_right; //A changer en 3
+        self.sprite_index = spr_snail_lvl3_attack_right;
         self.image_index = 0;
     }
-    /*else if(self.lvl = 4)
+    else if(self.lvl = 4)
     {
-        hit = instance_create(self.x+133,self.y+327,obj_hit_parent); // throw attack
-        hit.sprite_index=spr_snail_lvl4_attack_right;
+        hit = instance_create(self.x+23,self.y+119,obj_hit_parent); // throw attack
+        hit.sprite_index=spr_snail_hit_lvl4_right;
         
         //Create event
         self.sprite_index = spr_snail_lvl4_attack_right;
         self.image_index = 0;
-    }*/
+    }
 }
+
+with (hit){
+    if(obj_monster_player1.typeMonstre = 1){ //drake
+        if(obj_monster_player1.lvl = 1){
+            move_towards_point(obj_monster_player1.x + 20,obj_monster_player1.y + 359,global.hit_speed);
+        }else if(obj_monster_player1.lvl = 2){
+            move_towards_point(obj_monster_player1.x + 96,obj_monster_player1.y + 321,global.hit_speed);
+        }else if(obj_monster_player1.lvl = 3){
+            move_towards_point(obj_monster_player1.x + 110,obj_monster_player1.y + 263,global.hit_speed);
+        }else if(obj_monster_player1.lvl = 4){
+            move_towards_point(obj_monster_player1.x + 156,obj_monster_player1.y + 219,global.hit_speed);
+        }
+    }else{ //snail
+        if(obj_monster_player1.lvl = 1){
+            move_towards_point(obj_monster_player1.x + 32,obj_monster_player1.y + 352,global.hit_speed);
+        }else if(obj_monster_player1.lvl = 2){
+            move_towards_point(obj_monster_player1.x + 89,obj_monster_player1.y + 341,global.hit_speed);
+        }else if(obj_monster_player1.lvl = 3){
+            move_towards_point(obj_monster_player1.x + 205,obj_monster_player1.y + 271,global.hit_speed);
+        }else if(obj_monster_player1.lvl = 4){
+            move_towards_point(obj_monster_player1.x + 209,obj_monster_player1.y + 234,global.hit_speed);
+        }
+    }
+}
+
 with (hit)
-{  //Hit goes to the left
-   speed = -10;
+{  //Hit goes to the right
    damage = other.attack;
    thrower = other.object_index;
 }
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>30/(0.175 * (1+(attack_speed/100)))</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -299,7 +323,8 @@ if (image_index = 3){
         {
         case 1:image_index = 0; sprite_index = spr_drake_lvl1_idle_right; break;
         case 2:image_index = 0; sprite_index = spr_drake_lvl2_idle_right; break;
-        case 3:image_index = 0; sprite_index = spr_drake_lvl4_idle_right; break;
+        case 3:image_index = 0; sprite_index = spr_drake_lvl3_idle_right; break;
+        case 4:image_index = 0; sprite_index = spr_drake_lvl4_idle_right; break;
         //default:sprite_index = spr_drake_lvl2_idle_left;
         }
     }else{ //snail
@@ -308,6 +333,7 @@ if (image_index = 3){
         case 1:image_index = 0; sprite_index = spr_snail_lvl1_idle_right; break;
         case 2:image_index = 0; sprite_index = spr_snail_lvl2_idle_right; break;
         case 3:image_index = 0; sprite_index = spr_snail_lvl3_idle_right; break;
+        case 4:image_index = 0; sprite_index = spr_snail_lvl4_idle_right; break;
         //default:sprite_index = spr_snail_lvl2_idle_left;
         }
     }

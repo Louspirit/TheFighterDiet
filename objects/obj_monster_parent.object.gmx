@@ -36,6 +36,7 @@ calorie=0;
 calorie_level_1=10;
 calorie_level_2=30;
 calorie_level_3=50;
+calorie_level_4=80;
 current_item=-1;
 table=-1;
 </string>
@@ -77,11 +78,15 @@ if(table.id_obj_pickable &gt; 0 &amp;&amp; current_item == -1)
         // changer niveau perso
         lvl = 2;
     }
-    else if(calorie &gt;= calorie_level_3)
+    else if(calorie &gt;= calorie_level_3 &amp;&amp; calorie &lt; calorie_level_4)
     {
         // lvl3
         // changer niveau perso
         lvl = 3;
+    }
+    else
+    {
+        lvl = 4;
     }
     
     // mettre à jour les stats (force etc..)
