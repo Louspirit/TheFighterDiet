@@ -81,10 +81,10 @@ if(other.thrower != self.object_index){
     /*if(real_damage &lt;= 0){
         real_damage = 1;
     }*/
-    health = health - real_damage;
-    debug = health;
+    hp = hp - real_damage;
+    //debug = health;
    //Manage death
-     if(health&lt;=0){
+     if(hp&lt;=0){
         action_create_object(obj_draw_victory , view_xview[0]+ (view_wview[0] / 2), view_yview[0] + (view_hview[0] / 2));
         instance_destroy();
     }
