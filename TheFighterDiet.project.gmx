@@ -168,6 +168,7 @@
       <object>objects\obj_label_controlP1</object>
       <object>objects\obj_label_controlP2</object>
       <object>objects\obj_label_logo</object>
+      <object>objects\obj_drawStat</object>
     </objects>
     <objects name="Case">
       <object>objects\obj_caseMonstreDragonP1</object>
