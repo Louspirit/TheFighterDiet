@@ -103,6 +103,8 @@
       <sprite>sprites\spr_label_controlP1</sprite>
       <sprite>sprites\spr_label_controlP2</sprite>
       <sprite>sprites\spr_label_logo</sprite>
+      <sprite>sprites\spr_label_LD34</sprite>
+      <sprite>sprites\spr_logo_objectif</sprite>
     </sprites>
     <sprites name="Case">
       <sprite>sprites\spr_caseMonstreDragon</sprite>
@@ -169,6 +171,9 @@
       <object>objects\obj_label_controlP1</object>
       <object>objects\obj_label_controlP2</object>
       <object>objects\obj_label_logo</object>
+      <object>objects\obj_drawStat</object>
+      <object>objects\obj_label_LD37</object>
+      <object>objects\obj_label_logo_objectif</object>
     </objects>
     <objects name="Case">
       <object>objects\obj_caseMonstreDragonP1</object>

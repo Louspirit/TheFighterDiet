@@ -66,6 +66,11 @@ if(table.id_obj_pickable &gt; 0 &amp;&amp; current_item == -1)
 {
     // on gagne en calorie pour l'évolution
     calorie += 10;
+    //Informs player of the increase
+    drawable = instance_create(self.x,self.y-200,obj_drawStat);
+    drawable.text = "KILOGRAM ++";
+    drawable.color = c_white;
+        
     if(calorie &gt;= calorie_level_1 &amp;&amp; calorie &lt; calorie_level_2)
     {
         // lvl1
@@ -94,17 +99,29 @@ if(table.id_obj_pickable &gt; 0 &amp;&amp; current_item == -1)
     if(objet_sur_la_table == obj_gigot)
     { 
         // si gigot
-        self.attack += 10;
+        attack += 10;
+        //Informs player of the increase
+        drawable = instance_create(self.x,self.y-150,obj_drawStat);
+        drawable.text = "STRENGTH ++";
+        drawable.color = c_red;
     }
     else if(objet_sur_la_table == obj_legume)    
     {  
         // si legume
-        self.attack_speed += 10;
+        attack_speed += 10;
+         //Informs player of the increase
+        drawable = instance_create(self.x,self.y-150,obj_drawStat);
+        drawable.text = "SPEED ++";
+        drawable.color = c_yellow;
     }
     else if(objet_sur_la_table == obj_fruit)
     {    
         // si fruit 
-        self.defense += 10;
+        defense += 10;
+         //Informs player of the increase
+        drawable = instance_create(self.x,self.y-150,obj_drawStat);
+        drawable.text = "DEFENSE ++";
+        drawable.color = c_green;
     }
     
     current_item = table.id_obj_pickable;
