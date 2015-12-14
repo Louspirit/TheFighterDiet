@@ -60,8 +60,8 @@ switch (global.selectionP1)
 
 switch (global.selectionP1)
 {
-    case 0: self.x = obj_caseMonstreDragon.x; self.y = obj_caseMonstreDragon.y-32; break;
-    default: self.x = obj_caseMonstreSnail.x; self.y = obj_caseMonstreSnail.y-32; 
+    case 0: self.x = obj_caseMonstreDragonP1.x; self.y = obj_caseMonstreDragonP1.y-32; break;
+    default: self.x = obj_caseMonstreSnailP1.x; self.y = obj_caseMonstreSnailP1.y-32; 
 }
 </string>
           </argument>

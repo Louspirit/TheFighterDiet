@@ -102,6 +102,7 @@
       <sprite>sprites\spr_label_victory_solo</sprite>
       <sprite>sprites\spr_label_controlP1</sprite>
       <sprite>sprites\spr_label_controlP2</sprite>
+      <sprite>sprites\spr_label_logo</sprite>
     </sprites>
     <sprites name="Case">
       <sprite>sprites\spr_caseMonstreDragon</sprite>
@@ -166,12 +167,15 @@
       <object>objects\obj_countdown</object>
       <object>objects\obj_label_controlP1</object>
       <object>objects\obj_label_controlP2</object>
+      <object>objects\obj_label_logo</object>
     </objects>
     <objects name="Case">
-      <object>objects\obj_caseMonstreDragon</object>
+      <object>objects\obj_caseMonstreDragonP1</object>
       <object>objects\obj_fleche_selectionP1</object>
       <object>objects\obj_fleche_selectionP2</object>
-      <object>objects\obj_caseMonstreSnail</object>
+      <object>objects\obj_caseMonstreSnailP1</object>
+      <object>objects\obj_caseMonstreDragonP2</object>
+      <object>objects\obj_caseMonstreSnailP2</object>
     </objects>
   </objects>
   <rooms name="rooms">
