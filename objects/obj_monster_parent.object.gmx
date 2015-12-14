@@ -66,6 +66,7 @@ if(table.id_obj_pickable &gt; 0 &amp;&amp; current_item == -1)
 {
     // on gagne en calorie pour l'évolution
     calorie += 10;
+    drawText(x,y+50,"CALORY ++",c_white);
     if(calorie &gt;= calorie_level_1 &amp;&amp; calorie &lt; calorie_level_2)
     {
         // lvl1
