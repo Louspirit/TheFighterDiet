@@ -256,7 +256,7 @@ if(self.typeMonstre = 1) {
     else if(self.lvl = 4)
     {
         hit = instance_create(self.x+23,self.y+119,obj_hit_parent); // throw attack
-        hit.sprite_index=spr_snail_lvl4_attack_right;
+        hit.sprite_index=spr_snail_hit_lvl4_right;
         
         //Create event
         self.sprite_index = spr_snail_lvl4_attack_right;
