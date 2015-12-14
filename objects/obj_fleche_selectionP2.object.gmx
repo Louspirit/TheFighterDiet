@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="9" enumb="77">
+    <event eventtype="9" enumb="39">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -39,7 +39,7 @@ switch (global.selectionP2)
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="76">
+    <event eventtype="9" enumb="37">
       <action>
         <libid>1</libid>
         <id>603</id>
