@@ -186,15 +186,15 @@ if(self.typeMonstre = 1) {
         self.sprite_index = spr_drake_lvl2_attack_right;
         self.image_index = 0;
     }
-    /*else if(self.lvl = 3){
-        hit = instance_create(self.x+225,self.y+281,obj_hit_parent); // throw attack
+    else if(self.lvl = 3){
+        hit = instance_create(self.x+223,self.y+192,obj_hit_parent); // throw attack
         hit.sprite_index=spr_drake_hit_lvl3_right;
         
         //Create event
         self.sprite_index = spr_drake_lvl3_attack_right;
         self.image_index = 0;
-    }*/
-    else if(self.lvl = 3) //A changer en 4
+    }
+    else if(self.lvl = 4)
     {
         hit = instance_create(self.x+53,self.y+87,obj_hit_parent); // throw attack
         hit.sprite_index=spr_drake_hit_lvl4_right;
@@ -222,22 +222,22 @@ if(self.typeMonstre = 1) {
         self.image_index = 0;
     }
     else if(self.lvl = 3){
-        hit = instance_create(self.x+133,self.y+327,obj_hit_parent); // throw attack
-        hit.sprite_index=spr_snail_hit_lvl2_right; //A changer en 3
+        hit = instance_create(self.x+51,self.y+186,obj_hit_parent); // throw attack
+        hit.sprite_index=spr_snail_hit_lvl3_right;
         
         //Create event
-        self.sprite_index = spr_snail_lvl2_attack_right; //A changer en 3
+        self.sprite_index = spr_snail_lvl3_attack_right;
         self.image_index = 0;
     }
-    /*else if(self.lvl = 4)
+    else if(self.lvl = 4)
     {
-        hit = instance_create(self.x+133,self.y+327,obj_hit_parent); // throw attack
+        hit = instance_create(self.x+23,self.y+119,obj_hit_parent); // throw attack
         hit.sprite_index=spr_snail_lvl4_attack_right;
         
         //Create event
         self.sprite_index = spr_snail_lvl4_attack_right;
         self.image_index = 0;
-    }*/
+    }
 }
 with (hit)
 {  //Hit goes to the left

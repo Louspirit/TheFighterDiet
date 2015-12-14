@@ -31,6 +31,12 @@
           <sprite>sprites\spr_snail_lvl1_attack_right</sprite>
           <sprite>sprites\spr_snail_lvl3_idle_right</sprite>
           <sprite>sprites\spr_snail_lvl3_idle_left</sprite>
+          <sprite>sprites\spr_snail_lvl4_idle_right</sprite>
+          <sprite>sprites\spr_snail_lvl4_idle_left</sprite>
+          <sprite>sprites\spr_snail_lvl4_attack_right</sprite>
+          <sprite>sprites\spr_snail_lvl4_attack_left</sprite>
+          <sprite>sprites\spr_snail_lvl3_attack_right</sprite>
+          <sprite>sprites\spr_snail_lvl3_attack_left</sprite>
         </sprites>
         <sprites name="MonstreAtk">
           <sprite>sprites\spr_drake_lvl1_idle_left</sprite>
@@ -45,6 +51,10 @@
           <sprite>sprites\spr_drake_lvl4_attack_right</sprite>
           <sprite>sprites\spr_drake_lvl2_attack_left</sprite>
           <sprite>sprites\spr_drake_lvl2_attack_right</sprite>
+          <sprite>sprites\spr_drake_lvl3_idle_left</sprite>
+          <sprite>sprites\spr_drake_lvl3_idle_right</sprite>
+          <sprite>sprites\spr_drake_lvl3_attack_left</sprite>
+          <sprite>sprites\spr_drake_lvl3_attack_right</sprite>
         </sprites>
       </sprites>
     </sprites>
@@ -63,14 +73,20 @@
       <sprites name="Hits">
         <sprite>sprites\spr_drake_hit_lvl1_left</sprite>
         <sprite>sprites\spr_drake_hit_lvl1_right</sprite>
-        <sprite>sprites\spr_snail_hit_lvl2_right</sprite>
-        <sprite>sprites\spr_snail_hit_lvl2_left</sprite>
+        <sprite>sprites\spr_snail_hit_lvl3_right</sprite>
+        <sprite>sprites\spr_snail_hit_lvl3_left</sprite>
         <sprite>sprites\spr_snail_hit_lvl1_left</sprite>
         <sprite>sprites\spr_snail_hit_lvl1_right</sprite>
         <sprite>sprites\spr_drake_hit_lvl2_left</sprite>
         <sprite>sprites\spr_drake_hit_lvl2_right</sprite>
         <sprite>sprites\spr_drake_hit_lvl4_left</sprite>
         <sprite>sprites\spr_drake_hit_lvl4_right</sprite>
+        <sprite>sprites\spr_drake_hit_lvl3_left</sprite>
+        <sprite>sprites\spr_drake_hit_lvl3_right</sprite>
+        <sprite>sprites\spr_snail_hit_lvl2_right</sprite>
+        <sprite>sprites\spr_snail_hit_lvl2_left</sprite>
+        <sprite>sprites\spr_snail_hit_lvl4_right</sprite>
+        <sprite>sprites\spr_snail_hit_lvl4_left</sprite>
       </sprites>
       <sprites name="Decor">
         <sprite>sprites\spr_torche</sprite>
