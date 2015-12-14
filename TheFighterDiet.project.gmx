@@ -105,6 +105,15 @@
       <sprite>sprites\spr_label_logo</sprite>
       <sprite>sprites\spr_label_LD34</sprite>
       <sprite>sprites\spr_logo_objectif</sprite>
+      <sprite>sprites\spr_label_ctrl_monster_raiseAtk</sprite>
+      <sprite>sprites\spr_label_ctrl_monster_raiseDef</sprite>
+      <sprite>sprites\spr_label_ctrl_monster_raiseAtkSpeed</sprite>
+      <sprite>sprites\spr_label_ctrl_waiter_confuse</sprite>
+      <sprite>sprites\spr_label_ctrl_waiter_slow</sprite>
+      <sprite>sprites\spr_label_ctrl_waiter_stun</sprite>
+      <sprite>sprites\spr_label_ctrl_waiter_speedUp</sprite>
+      <sprite>sprites\spr_label_logo_monsterBuff</sprite>
+      <sprite>sprites\spr_label_logo_waiterBuff</sprite>
     </sprites>
     <sprites name="Case">
       <sprite>sprites\spr_caseMonstreDragon</sprite>
@@ -115,6 +124,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\bck_dinerRoom</background>
+    <background>background\bck_select</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -163,6 +173,13 @@
       <object>objects\obj_table_right</object>
       <object>objects\obj_table_parent</object>
       <object>objects\obj_barre_select</object>
+      <object>objects\obj_freeze_gigot</object>
+      <object>objects\obj_freeze_legume</object>
+      <object>objects\obj_freeze_fruit</object>
+      <object>objects\obj_freeze_speedUp</object>
+      <object>objects\obj_freeze_slow</object>
+      <object>objects\obj_freeze_stun</object>
+      <object>objects\obj_freeze_confuse</object>
     </objects>
     <objects name="Texts">
       <object>objects\obj_draw_victory</object>
@@ -172,6 +189,15 @@
       <object>objects\obj_label_logo</object>
       <object>objects\obj_label_LD37</object>
       <object>objects\obj_label_logo_objectif</object>
+      <object>objects\obj_label_ctrl_monster_raiseAtk</object>
+      <object>objects\obj_label_ctrl_monster_raiseDef</object>
+      <object>objects\obj_label_ctrl_monster_raiseAtkSpeed</object>
+      <object>objects\obj_label_ctrl_waiter_confuse</object>
+      <object>objects\obj_label_ctrl_waiter_slow</object>
+      <object>objects\obj_label_ctrl_waiter_stun</object>
+      <object>objects\obj_label_ctrl_waiter_speedUp</object>
+      <object>objects\obj_label_logo_monsterBuff</object>
+      <object>objects\obh_label_logo_waiterBuff</object>
     </objects>
     <objects name="Case">
       <object>objects\obj_caseMonstreDragonP1</object>
