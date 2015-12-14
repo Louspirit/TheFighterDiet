@@ -165,7 +165,8 @@
       <object>objects\obj_barre_select</object>
     </objects>
     <objects name="Texts">
-      <object>objects\obj_draw_victory</object>
+      <object>objects\obj_draw_victoryP1</object>
+      <object>objects\obj_draw_victoryP2</object>
       <object>objects\obj_countdown</object>
       <object>objects\obj_label_controlP1</object>
       <object>objects\obj_label_controlP2</object>

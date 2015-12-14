@@ -76,16 +76,31 @@
           <argument>
             <kind>1</kind>
             <string>//Decrease health
+// other.thrower c'est l'ennemi
+colision_player_un = self.object_index == obj_monster_player1;
+colision_player_deux = self.object_index == obj_monster_player2;
+missile_player_un = other.thrower.object_index == obj_monster_player1;
+missile_player_deux = other.thrower.object_index == obj_monster_player2;
+
 if(other.thrower != self.object_index){
     real_damage = other.damage - other.damage * (100/(defense+100));
     /*if(real_damage &lt;= 0){
         real_damage = 1;
     }*/
-    hp = hp - real_damage;
+    self.hp = self.hp - real_damage;
     //debug = health;
    //Manage death
-     if(hp&lt;=0){
-        action_create_object(obj_draw_victory , view_xview[0]+ (view_wview[0] / 2), view_yview[0] + (view_hview[0] / 2));
+   if(hp&lt;=0){
+        // afficher le bon label de victoire (joueur 1 ou joueur 2)
+        if(other.thrower.object_index == obj_monster_player1)
+        {
+            obj_draw_victory = obj_draw_victoryP1;
+        }
+        else
+        {
+            obj_draw_victory = obj_draw_victoryP2;   
+        }
+        action_create_object(obj_draw_victory , 290, 54);
         instance_destroy();
     }
     //Destroy hit
