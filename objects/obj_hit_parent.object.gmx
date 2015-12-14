@@ -77,11 +77,12 @@
             <kind>1</kind>
             <string>//Decrease health
 if(other.thrower != self.object_index){
-    real_damage = other.damage - (other.damage * (defense/100));
+    real_damage = other.damage - other.damage * (100/(defense+100));
     /*if(real_damage &lt;= 0){
         real_damage = 1;
     }*/
     health = health - real_damage;
+    debug = health;
    //Manage death
      if(health&lt;=0){
         action_create_object(obj_draw_victory , view_xview[0]+ (view_wview[0] / 2), view_yview[0] + (view_hview[0] / 2));
