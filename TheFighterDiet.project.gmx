@@ -73,8 +73,8 @@
       <sprites name="Hits">
         <sprite>sprites\spr_drake_hit_lvl1_left</sprite>
         <sprite>sprites\spr_drake_hit_lvl1_right</sprite>
-        <sprite>sprites\spr_snail_hit_lvl3_right</sprite>
-        <sprite>sprites\spr_snail_hit_lvl3_left</sprite>
+        <sprite>sprites\spr_snail_hit_lvl2_right</sprite>
+        <sprite>sprites\spr_snail_hit_lvl2_left</sprite>
         <sprite>sprites\spr_snail_hit_lvl1_left</sprite>
         <sprite>sprites\spr_snail_hit_lvl1_right</sprite>
         <sprite>sprites\spr_drake_hit_lvl2_left</sprite>
@@ -83,8 +83,8 @@
         <sprite>sprites\spr_drake_hit_lvl4_right</sprite>
         <sprite>sprites\spr_drake_hit_lvl3_left</sprite>
         <sprite>sprites\spr_drake_hit_lvl3_right</sprite>
-        <sprite>sprites\spr_snail_hit_lvl2_right</sprite>
-        <sprite>sprites\spr_snail_hit_lvl2_left</sprite>
+        <sprite>sprites\spr_snail_hit_lvl3_right</sprite>
+        <sprite>sprites\spr_snail_hit_lvl3_left</sprite>
         <sprite>sprites\spr_snail_hit_lvl4_right</sprite>
         <sprite>sprites\spr_snail_hit_lvl4_left</sprite>
       </sprites>

@@ -239,9 +239,33 @@ if(self.typeMonstre = 1) {
         self.image_index = 0;
     }
 }
+
+with (hit){
+    if(obj_monster_player1.typeMonstre = 1){ //drake
+        if(obj_monster_player1.lvl = 1){
+            move_towards_point(obj_monster_player1.x + 20,obj_monster_player1.y + 359,global.hit_speed);
+        }else if(obj_monster_player1.lvl = 2){
+            move_towards_point(obj_monster_player1.x + 96,obj_monster_player1.y + 321,global.hit_speed);
+        }else if(obj_monster_player1.lvl = 3){
+            move_towards_point(obj_monster_player1.x + 110,obj_monster_player1.y + 263,global.hit_speed);
+        }else if(obj_monster_player1.lvl = 4){
+            move_towards_point(obj_monster_player1.x + 156,obj_monster_player1.y + 219,global.hit_speed);
+        }
+    }else{ //snail
+        if(obj_monster_player1.lvl = 1){
+            move_towards_point(obj_monster_player1.x + 32,obj_monster_player1.y + 352,global.hit_speed);
+        }else if(obj_monster_player1.lvl = 2){
+            move_towards_point(obj_monster_player1.x + 89,obj_monster_player1.y + 341,global.hit_speed);
+        }else if(obj_monster_player1.lvl = 3){
+            move_towards_point(obj_monster_player1.x + 205,obj_monster_player1.y + 271,global.hit_speed);
+        }else if(obj_monster_player1.lvl = 4){
+            move_towards_point(obj_monster_player1.x + 209,obj_monster_player1.y + 234,global.hit_speed);
+        }
+    }
+}
+
 with (hit)
-{  //Hit goes to the left
-   speed = -10;
+{  //Hit goes to the right
    damage = other.attack;
    thrower = other.object_index;
 }
