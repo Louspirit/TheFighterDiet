@@ -34,9 +34,9 @@ attack_speed=35; //nb_attack/sec =&gt; 0.175 * (1 + attack_speed)
 image_speed=0.2;
 calorie=0;
 calorie_level_1=10;
-calorie_level_2=30;
-calorie_level_3=50;
-calorie_level_4=80;
+calorie_level_2=50;
+calorie_level_3=100;
+calorie_level_4=150;
 current_item=-1;
 table=-1;
 </string>
@@ -66,6 +66,7 @@ if(table.id_obj_pickable &gt; 0 &amp;&amp; current_item == -1)
 {
     // on gagne en calorie pour l'évolution
     calorie += 10;
+    drawText(x,y+50,"CALORY ++",c_white);
     if(calorie &gt;= calorie_level_1 &amp;&amp; calorie &lt; calorie_level_2)
     {
         // lvl1
