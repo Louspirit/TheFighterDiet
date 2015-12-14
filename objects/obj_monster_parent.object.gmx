@@ -94,17 +94,17 @@ if(table.id_obj_pickable &gt; 0 &amp;&amp; current_item == -1)
     if(objet_sur_la_table == obj_gigot)
     { 
         // si gigot
-        attack += 10;
+        self.attack += 10;
     }
     else if(objet_sur_la_table == obj_legume)    
     {  
         // si legume
-        attack_speed += 10;
+        self.attack_speed += 10;
     }
     else if(objet_sur_la_table == obj_fruit)
     {    
         // si fruit 
-        defense += 10;
+        self.defense += 10;
     }
     
     current_item = table.id_obj_pickable;
