@@ -245,7 +245,7 @@ if(self.typeMonstre = 1) { //drake
     else if(self.lvl = 3)
     {
         hit = instance_create(self.x+328,self.y+189,obj_hit_parent); // throw attack
-        hit.sprite_index=spr_snail_lvl3_attack_left;
+        hit.sprite_index=spr_snail_hit_lvl3_left;
         
         //Create event
         self.sprite_index = spr_snail_lvl3_attack_left;
@@ -297,7 +297,8 @@ if (image_index = 3){
         {
         case 1:image_index = 0; sprite_index = spr_drake_lvl1_idle_left; break;
         case 2:image_index = 0; sprite_index = spr_drake_lvl2_idle_left; break;
-        case 3:image_index = 0; sprite_index = spr_drake_lvl4_idle_left; break;
+        case 3:image_index = 0; sprite_index = spr_drake_lvl3_idle_left; break;
+        case 4:image_index = 0; sprite_index = spr_drake_lvl4_idle_left; break;
         //default:sprite_index = spr_drake_lvl2_idle_left;
         }
     }else{ //snail
@@ -306,6 +307,7 @@ if (image_index = 3){
         case 1:image_index = 0; sprite_index = spr_snail_lvl1_idle_left; break;
         case 2:image_index = 0; sprite_index = spr_snail_lvl2_idle_left; break;
         case 3:image_index = 0; sprite_index = spr_snail_lvl3_idle_left; break;
+        case 4:image_index = 0; sprite_index = spr_snail_lvl4_idle_left; break;
         //default:sprite_index = spr_snail_lvl2_idle_left;
         }
     }
