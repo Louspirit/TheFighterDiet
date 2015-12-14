@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>health=1200;
+            <string>hp=1200;
+max_health = hp;
 attack=60; //dégats avant réduction de damage
 defense=27; //réduction de dégats =&gt; (100/100 + Armor) * attack_ennemy = dégats subits
 attack_speed=35; //nb_attack/sec =&gt; 0.175 * (1 + attack_speed)
