@@ -76,6 +76,7 @@
         <sprite>sprites\spr_torche</sprite>
         <sprite>sprites\spr_table_left</sprite>
         <sprite>sprites\spr_table_right</sprite>
+        <sprite>sprites\spr_barre_select</sprite>
       </sprites>
     </sprites>
     <sprites name="Label">
@@ -83,6 +84,8 @@
       <sprite>sprites\spr_label_victory_p2</sprite>
       <sprite>sprites\spr_label_victory_IA</sprite>
       <sprite>sprites\spr_label_victory_solo</sprite>
+      <sprite>sprites\spr_label_controlP1</sprite>
+      <sprite>sprites\spr_label_controlP2</sprite>
     </sprites>
     <sprites name="Case">
       <sprite>sprites\spr_caseMonstreDragon</sprite>
@@ -97,6 +100,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\drawText.gml</script>
+    <script>scripts\script1.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\ft_intro</font>
@@ -139,10 +143,13 @@
       <object>objects\obj_table_left</object>
       <object>objects\obj_table_right</object>
       <object>objects\obj_table_parent</object>
+      <object>objects\obj_barre_select</object>
     </objects>
     <objects name="Texts">
       <object>objects\obj_draw_victory</object>
       <object>objects\obj_countdown</object>
+      <object>objects\obj_label_controlP1</object>
+      <object>objects\obj_label_controlP2</object>
     </objects>
     <objects name="Case">
       <object>objects\obj_caseMonstreDragon</object>
