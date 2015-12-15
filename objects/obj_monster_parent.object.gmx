@@ -71,27 +71,41 @@ if(table.id_obj_pickable &gt; 0 &amp;&amp; current_item == -1)
     drawable.text = "KILOGRAM ++";
     drawable.color = c_white;
         
-    if(calorie &gt;= calorie_level_1 &amp;&amp; calorie &lt; calorie_level_2)
+    /*if(calorie &gt;= calorie_level_1 &amp;&amp; calorie &lt; calorie_level_2)
     {
         // lvl1
         // changer niveau perso
         lvl = 1;
-    }
-    else if(calorie &gt;= calorie_level_2 &amp;&amp; calorie &lt; calorie_level_3)
+        hp += 100;
+        //max_health += 100;
+    }*/
+    if(calorie &gt;= calorie_level_2 &amp;&amp; calorie &lt; calorie_level_3)
     {
-        // lvl2
-        // changer niveau perso
-        lvl = 2;
+        if(lvl = 1){
+            // lvl2
+            // changer niveau perso
+            lvl = 2;
+            hp += 100;
+            max_health += 100;
+        }
     }
     else if(calorie &gt;= calorie_level_3 &amp;&amp; calorie &lt; calorie_level_4)
     {
-        // lvl3
-        // changer niveau perso
-        lvl = 3;
+        if(lvl =2){
+            // lvl3
+            // changer niveau perso
+            lvl = 3;
+            hp += 150;
+            max_health += 150;
+        }
     }
     else if(calorie &gt;= calorie_level_4)
     {
-        lvl = 4;
+        if(lvl = 3){
+            lvl = 4;
+            hp += 300;
+            max_health += 300;
+        }
     }
     
     // mettre à jour les stats (force etc..)
@@ -108,19 +122,19 @@ if(table.id_obj_pickable &gt; 0 &amp;&amp; current_item == -1)
     else if(objet_sur_la_table == obj_legume)    
     {  
         // si legume
-        attack_speed += 20;
-         //Informs player of the increase
-        drawable = instance_create(self.x,self.y-150,obj_drawStat);
-        drawable.text = "SPEED ++";
-        drawable.color = c_yellow;
-    }
-    else if(objet_sur_la_table == obj_fruit)
-    {    
-        // si fruit 
         defense += 10;
          //Informs player of the increase
         drawable = instance_create(self.x,self.y-150,obj_drawStat);
         drawable.text = "DEFENSE ++";
+        drawable.color = c_yellow;
+    }
+    else if(objet_sur_la_table == obj_fruit)
+    {    
+        // si fruit
+        attack_speed += 10;
+         //Informs player of the increase
+        drawable = instance_create(self.x,self.y-150,obj_drawStat);
+        drawable.text = "ATK SPEED ++";
         drawable.color = c_green;
     }
     

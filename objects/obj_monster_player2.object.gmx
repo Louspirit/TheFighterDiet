@@ -168,7 +168,7 @@ table=obj_table_right;
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>30/(0.175 * (1+(attack_speed/100)))</string>
+            <string>30/(0.225 * (1+(attack_speed/100)))</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -293,7 +293,7 @@ if(instance_exists(obj_monster_player1))
     
     with (hit)
     {  //Hit goes to the right
-       damage = other.attack;
+       damage = 50*(1+(other.attack/100));
        thrower = other.object_index;
     }
 }

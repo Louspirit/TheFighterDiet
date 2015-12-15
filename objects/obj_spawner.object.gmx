@@ -29,7 +29,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>100</string>
+            <string>80</string>
           </argument>
         </arguments>
       </action>
@@ -53,7 +53,31 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>500</string>
+            <string>390</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>choixPower</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -163,15 +187,23 @@ else if(choixFood &gt;= def &amp;&amp; choixFood &lt; vit){
 }*/
 
 nb_power = 4;
-choixPower = random(nb_power);
+//choixPower = random(nb_power);
 //choixPower = 3;
-
 speedUp = 0;
 slow = 1;
 stun = 2;
 inversionCtrl = 3;
 
-if(choixPower &gt;=speedUp &amp;&amp; choixPower &lt; slow){
+if(choixPower = 0){
+    instance_create(room_width/2, 20, obj_speedUp);
+}else if(choixPower = 1){
+    instance_create(room_width/2, 20, obj_slow);
+}else if(choixPower = 2){
+    instance_create(room_width/2, 20, obj_stun);
+}else{
+    instance_create(room_width/2, 20, obj_inversionCtrl);
+}
+/*if(choixPower &gt;=speedUp &amp;&amp; choixPower &lt; slow){
     instance_create(room_width/2, 20, obj_speedUp);
 }
 else if(choixPower &gt;= slow &amp;&amp; choixPower &lt; stun){
@@ -182,9 +214,9 @@ else if(choixPower &gt;= stun &amp;&amp; choixPower &lt; inversionCtrl){
 }
 else{
     instance_create(room_width/2, 20, obj_inversionCtrl);
-}
+}*/
 
-
+choixPower = (choixPower +1)%nb_power;
 
 </string>
           </argument>
@@ -242,12 +274,12 @@ def = 1;
 vit = 2;
 table_width = 144+15;
 if(choixFood &gt;= atk &amp;&amp; choixFood &lt; def){
-    instance_create(160 + random(640), 20, obj_gigot);
+    instance_create(224 + random(544), 20, obj_gigot);
 }
 else if(choixFood &gt;= def &amp;&amp; choixFood &lt; vit){
-    instance_create(160 + random(640), 20, obj_legume);
+    instance_create(224 + random(544), 20, obj_legume);
 }else{
-    instance_create(160 + random(640), 20, obj_fruit);
+    instance_create(224 + random(544), 20, obj_fruit);
 }
 
 

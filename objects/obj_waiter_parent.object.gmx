@@ -134,7 +134,7 @@ if(other.picked == false){
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>100</string>
+            <string>150</string>
           </argument>
           <argument>
             <kind>4</kind>
