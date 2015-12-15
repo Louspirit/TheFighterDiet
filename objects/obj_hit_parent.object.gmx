@@ -119,6 +119,7 @@ if(object_exists(self.object_index)){
         //debug = health;
        //Manage death
        if(hp&lt;=0){
+            obj_hit_parent.y = -300;
             // afficher le bon label de victoire (joueur 1 ou joueur 2)
             if(other.thrower.object_index == obj_monster_player1)
             {

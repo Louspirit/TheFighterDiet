@@ -25,8 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//hp=1200;
-hp = 500;
+            <string>hp=2500;
 max_health = hp;
 attack=60; //dégats avant réduction de damage
 defense=27; //réduction de dégats =&gt; (100/100 + Armor) * attack_ennemy = dégats subits
@@ -109,7 +108,7 @@ if(table.id_obj_pickable &gt; 0 &amp;&amp; current_item == -1)
     else if(objet_sur_la_table == obj_legume)    
     {  
         // si legume
-        attack_speed += 10;
+        attack_speed += 20;
          //Informs player of the increase
         drawable = instance_create(self.x,self.y-150,obj_drawStat);
         drawable.text = "SPEED ++";

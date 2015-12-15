@@ -139,7 +139,8 @@ table=obj_table_left;
             <kind>1</kind>
             <string>if(current_item&gt;0)
 {
-    current_item.y = 5;
+    
+    current_item.x = -50;
     current_item = -1;
     table.id_obj_pickable = -1;
 }
