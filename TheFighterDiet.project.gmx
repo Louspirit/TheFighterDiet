@@ -5,9 +5,9 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\main_theme</sound>
     <sound>sound\slow_theme</sound>
     <sound>sound\powerup_theme</sound>
+    <sound>sound\main_theme</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Character">
@@ -217,6 +217,10 @@
   <help>
     <rtf>help.rtf</rtf>
   </help>
+  <audiogroups name="audiogroups">
+    <audiogroup name="audiogroup_default"/>
+    <audiogroup name="othergroup"/>
+  </audiogroups>
   <TutorialState>
     <IsTutorial>-1</IsTutorial>
     <TutorialName>C:\Users\Guillaume\AppData\Local\GameMaker-Studio\tutorials\HTML5_Scaling\</TutorialName>

@@ -77,11 +77,6 @@
             <kind>1</kind>
             <string>//Decrease health
 // other.thrower c'est l'ennemi
-colision_player_un = self.object_index == obj_monster_player1;
-colision_player_deux = self.object_index == obj_monster_player2;
-missile_player_un = other.thrower.object_index == obj_monster_player1;
-missile_player_deux = other.thrower.object_index == obj_monster_player2;
-
 if(other.thrower != self.object_index){
     real_damage = other.damage - other.damage * (100/(defense+100));
     /*if(real_damage &lt;= 0){
