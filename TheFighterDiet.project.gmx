@@ -126,6 +126,7 @@
   <backgrounds name="background">
     <background>background\bck_dinerRoom</background>
     <background>background\bck_select</background>
+    <background>background\bck_start</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -202,6 +203,7 @@
       <object>objects\obj_label_ctrl_waiter_speedUp</object>
       <object>objects\obj_label_logo_monsterBuff</object>
       <object>objects\obh_label_logo_waiterBuff</object>
+      <object>objects\obj_wait</object>
     </objects>
     <objects name="Case">
       <object>objects\obj_caseMonstreDragonP1</object>
@@ -213,6 +215,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_start</room>
     <room>rooms\rm_select</room>
     <room>rooms\rm_dining_room</room>
   </rooms>
