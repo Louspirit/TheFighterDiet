@@ -51,8 +51,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!sound_isplaying(main_theme) &amp;&amp; !sound_isplaying(powerup_theme) &amp;&amp; !sound_isplaying(slow_theme)) //if the first sound has stopped and the second isn't already playing
-sound_loop(main_theme)
+            <string>if(!audio_is_playing(main_theme) &amp;&amp; !audio_is_playing(powerup_theme) &amp;&amp; !audio_is_playing(slow_theme)){
+    //if the first sound has stopped and the second isn't already playing
+    audio_play_sound(main_theme, 10000000, true);
+}
 
 </string>
           </argument>
