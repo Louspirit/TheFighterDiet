@@ -242,12 +242,12 @@ def = 1;
 vit = 2;
 table_width = 144+15;
 if(choixFood &gt;= atk &amp;&amp; choixFood &lt; def){
-    instance_create(random_range(160,800), 20, obj_gigot);
+    instance_create(160 + random(640), 20, obj_gigot);
 }
 else if(choixFood &gt;= def &amp;&amp; choixFood &lt; vit){
-    instance_create(random_range(160,800), 20, obj_legume);
+    instance_create(160 + random(640), 20, obj_legume);
 }else{
-    instance_create(random_range(160,800), 20, obj_fruit);
+    instance_create(160 + random(640), 20, obj_fruit);
 }
 
 
