@@ -77,30 +77,32 @@
             <kind>1</kind>
             <string>//Decrease health
 // other.thrower c'est l'ennemi
-if(other.thrower != self.object_index){
-    real_damage = other.damage - other.damage * (100/(defense+100));
-    /*if(real_damage &lt;= 0){
-        real_damage = 1;
-    }*/
-    self.hp = self.hp - real_damage;
-    //debug = health;
-   //Manage death
-   if(hp&lt;=0){
-        // afficher le bon label de victoire (joueur 1 ou joueur 2)
-        if(other.thrower.object_index == obj_monster_player1)
-        {
-            obj_draw_victory = obj_draw_victoryP1;
+if(object_exists(self.object_index)){
+    if(other.thrower != self.object_index){
+        real_damage = other.damage * (100/(defense+100));
+        /*if(real_damage &lt;= 0){
+            real_damage = 1;
+        }*/
+        self.hp = self.hp - real_damage;
+        //debug = health;
+       //Manage death
+       if(hp&lt;=0){
+            // afficher le bon label de victoire (joueur 1 ou joueur 2)
+            if(other.thrower.object_index == obj_monster_player1)
+            {
+                obj_draw_victory = obj_draw_victoryP1;
+            }
+            else
+            {
+                obj_draw_victory = obj_draw_victoryP2;   
+            }
+            action_create_object(obj_draw_victory , 290, 54);
+            instance_destroy();
         }
-        else
-        {
-            obj_draw_victory = obj_draw_victoryP2;   
-        }
-        action_create_object(obj_draw_victory , 290, 54);
+        //Destroy hit
+        with(other){  
         instance_destroy();
-    }
-    //Destroy hit
-    with(other){  
-    instance_destroy();
+        }
     }
 }
 </string>
