@@ -33,10 +33,10 @@ attack_speed=35; //nb_attack/sec =&gt; 0.175 * (1 + attack_speed)
                  //freq_attack = 1/nb_attack
 image_speed=0.2;
 calorie=0;
-calorie_level_1=10;
-calorie_level_2=50;
-calorie_level_3=100;
-calorie_level_4=150;
+calorie_level_1=0;
+calorie_level_2=70;
+calorie_level_3=140;
+calorie_level_4=200;
 current_item=-1;
 table=-1;
 </string>
@@ -89,7 +89,7 @@ if(table.id_obj_pickable &gt; 0 &amp;&amp; current_item == -1)
         // changer niveau perso
         lvl = 3;
     }
-    else
+    else if(calorie &gt;= calorie_level_4)
     {
         lvl = 4;
     }
