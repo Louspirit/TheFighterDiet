@@ -115,6 +115,7 @@
       <sprite>sprites\spr_label_ctrl_waiter_speedUp</sprite>
       <sprite>sprites\spr_label_logo_monsterBuff</sprite>
       <sprite>sprites\spr_label_logo_waiterBuff</sprite>
+      <sprite>sprites\spr_label_enter</sprite>
     </sprites>
     <sprites name="Case">
       <sprite>sprites\spr_caseMonstreDragon</sprite>
@@ -204,6 +205,7 @@
       <object>objects\obj_label_logo_monsterBuff</object>
       <object>objects\obh_label_logo_waiterBuff</object>
       <object>objects\obj_wait</object>
+      <object>objects\obj_label_enter</object>
     </objects>
     <objects name="Case">
       <object>objects\obj_caseMonstreDragonP1</object>
