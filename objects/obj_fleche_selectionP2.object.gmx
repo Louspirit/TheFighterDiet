@@ -25,14 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(keyboard_check(ord('M'))){
-    global.selectionP2 = (global.selectionP2 + 1)%global.nbMonstre;
-}
+            <string>global.selectionP2 = (global.selectionP2 + 1)%global.nbMonstre;
 
 switch (global.selectionP2)
 {
-    case 0: self.x = obj_caseMonstreDragonP2.x; self.y = obj_caseMonstreDragonP2.y-32; break;
-    default: self.x = obj_caseMonstreSnailP2.x; self.y = obj_caseMonstreSnailP2.y-32; 
+    case 0: self.x = obj_caseMonstreDragonP2.x; self.y = obj_caseMonstreDragonP2.y-100; break;
+    default: self.x = obj_caseMonstreSnailP2.x; self.y = obj_caseMonstreSnailP2.y-100; 
 }
 </string>
           </argument>
@@ -60,8 +58,8 @@ switch (global.selectionP2)
 
 switch (global.selectionP2)
 {
-    case 0: self.x = obj_caseMonstreDragonP1.x; self.y = obj_caseMonstreDragonP2.y-32; break;
-    default: self.x = obj_caseMonstreSnailP1.x; self.y = obj_caseMonstreSnailP2.y-32; 
+    case 0: self.x = obj_caseMonstreDragonP2.x; self.y = obj_caseMonstreDragonP2.y-100; break;
+    default: self.x = obj_caseMonstreSnailP2.x; self.y = obj_caseMonstreSnailP2.y-100; 
 }
 </string>
           </argument>

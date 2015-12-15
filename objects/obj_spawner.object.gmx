@@ -29,7 +29,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>50</string>
+            <string>100</string>
           </argument>
         </arguments>
       </action>
@@ -53,7 +53,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>150</string>
+            <string>500</string>
           </argument>
         </arguments>
       </action>
@@ -206,7 +206,7 @@ else{
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>100</string>
+            <string>freq_pop_power</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -271,34 +271,11 @@ else if(choixFood &gt;= def &amp;&amp; choixFood &lt; vit){
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>20</string>
+            <string>freq_pop_food</string>
           </argument>
           <argument>
             <kind>4</kind>
             <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="5" enumb="82">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>room_restart();
-</string>
           </argument>
         </arguments>
       </action>
