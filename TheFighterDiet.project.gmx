@@ -8,6 +8,7 @@
     <sound>sound\slow_theme</sound>
     <sound>sound\powerup_theme</sound>
     <sound>sound\main_theme</sound>
+    <sound>sound\menu_theme</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Character">
@@ -164,6 +165,7 @@
     </objects>
     <objects name="Sounds">
       <object>objects\snd_main_theme</object>
+      <object>objects\snd_menu_theme</object>
       <object>objects\snd_powerup_theme</object>
       <object>objects\snd_slow_theme</object>
     </objects>
